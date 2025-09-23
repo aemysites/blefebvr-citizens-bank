@@ -228,7 +228,8 @@
           "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/footer[1]/div[2]",
           "section": "section-2"
         }
-      ]
+      ],
+      "key": "unknown4"
     },
     {
       "name": "Columns",
@@ -557,7 +558,8 @@
           "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/footer[1]/div[2]",
           "section": "section-2"
         }
-      ]
+      ],
+      "key": "unknown26"
     },
     {
       "name": "Hero",
@@ -585,7 +587,8 @@
           "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/footer[1]/div[2]",
           "section": "section-2"
         }
-      ]
+      ],
+      "key": "unknown28"
     }
   ],
   "outliers": [
