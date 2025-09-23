@@ -1,0 +1,36 @@
+{
+  "templates": [
+    {
+      "name": "E-commerce Product Listing",
+      "cluster": 1,
+      "pages": [
+        {
+          "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+          "uuid": "a9ddfda12cc9a67b742df355ebbc7d161d775558"
+        },
+        {
+          "url": "https://www.citizensbank.com/checking/overview.aspx",
+          "uuid": "2939b6f930065b8d21273c25c01507c13ae023a8"
+        }
+      ]
+    },
+    {
+      "name": "'Dashboard Template'",
+      "cluster": 2,
+      "pages": [
+        {
+          "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+          "uuid": "78ea4bc536fbc566a848ed9937abe239b3c38564"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+          "uuid": "d23406c313077f53ef23e86fd26654d0eb07ab80"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+          "uuid": "f7c11c2eb47250da73bf51416aff2243e4e32bb7"
+        }
+      ]
+    }
+  ]
+}

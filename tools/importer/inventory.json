@@ -1,0 +1,775 @@
+{
+  "fragments": [
+    {
+      "name": "nav",
+      "path": "/nav",
+      "totalBoxes": 2,
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/checking/overview.aspx",
+          "urlHash": "2939b6f930065b8d21273c25c01507c13ae023a8",
+          "uuid": "2939b6f9-00-333d8e01ab70f0aaa2081551b6bd5a369885fa22",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/header[1]/section[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/checking/overview.aspx",
+          "urlHash": "2939b6f930065b8d21273c25c01507c13ae023a8",
+          "uuid": "2939b6f9-01-d68819774b14c3d6778b53ad202f6ebf14ebf4b0",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/header[1]/section[2]/div[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+          "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+          "uuid": "78ea4bc5-00-b87d77aa63b7a29a4afe2885537f3155033c4c9a",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+          "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+          "uuid": "78ea4bc5-01-15f79d362ea2ed4171e4bb36ac71eb3d35428ed4",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[2]/div[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+          "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+          "uuid": "a9ddfda1-00-b87d77aa63b7a29a4afe2885537f3155033c4c9a",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+          "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+          "uuid": "a9ddfda1-01-15f79d362ea2ed4171e4bb36ac71eb3d35428ed4",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[2]/div[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+          "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+          "uuid": "d23406c3-00-b87d77aa63b7a29a4afe2885537f3155033c4c9a",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+          "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+          "uuid": "d23406c3-01-15f79d362ea2ed4171e4bb36ac71eb3d35428ed4",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[2]/div[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+          "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+          "uuid": "f7c11c2e-00-b87d77aa63b7a29a4afe2885537f3155033c4c9a",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+          "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+          "uuid": "f7c11c2e-01-15f79d362ea2ed4171e4bb36ac71eb3d35428ed4",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[2]/div[1]"
+        }
+      ],
+      "styles": {
+        "height": 200
+      }
+    },
+    {
+      "name": "footer",
+      "path": "/footer",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/checking/overview.aspx",
+          "urlHash": "2939b6f930065b8d21273c25c01507c13ae023a8",
+          "uuid": "2939b6f9-10-d72caa907dc624342957e5b0bf1f3f76c63d7ee7",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[3]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+          "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+          "uuid": "78ea4bc5-14-0bf9a3e71a09711a71dc63059692e45437bb24dd",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[3]"
+        },
+        {
+          "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+          "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+          "uuid": "a9ddfda1-11-2f6860e7141cbad2cc8dcc0f57766f5756bc9ab6",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[2]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+          "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+          "uuid": "d23406c3-12-2f6860e7141cbad2cc8dcc0f57766f5756bc9ab6",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[2]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+          "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+          "uuid": "f7c11c2e-14-2f6860e7141cbad2cc8dcc0f57766f5756bc9ab6",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[2]"
+        }
+      ],
+      "styles": {}
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Columns",
+      "cluster": 1,
+      "source": "Columns block",
+      "target": "Columns block (columns1)",
+      "key": "columns1",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/checking/overview.aspx",
+          "urlHash": "2939b6f930065b8d21273c25c01507c13ae023a8",
+          "uuid": "2939b6f9-08-8d83a85f8d0b82b835aef0fc7684dbe1e5849615",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/footer[1]/div[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+          "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+          "uuid": "a9ddfda1-09-fc5783d9df26e72ae96ef78ac5cfd8ed3be3e4e2",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/footer[1]/div[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+          "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+          "uuid": "d23406c3-10-fc5783d9df26e72ae96ef78ac5cfd8ed3be3e4e2",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/footer[1]/div[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+          "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+          "uuid": "f7c11c2e-12-fc5783d9df26e72ae96ef78ac5cfd8ed3be3e4e2",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/footer[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "cluster": 2,
+      "source": "Header",
+      "target": "Header (header2)",
+      "key": "header2",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/checking/overview.aspx",
+          "urlHash": "2939b6f930065b8d21273c25c01507c13ae023a8",
+          "uuid": "2939b6f9-00-333d8e01ab70f0aaa2081551b6bd5a369885fa22",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/header[1]/section[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+          "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+          "uuid": "78ea4bc5-00-b87d77aa63b7a29a4afe2885537f3155033c4c9a",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+          "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+          "uuid": "d23406c3-00-b87d77aa63b7a29a4afe2885537f3155033c4c9a",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+          "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+          "uuid": "f7c11c2e-00-b87d77aa63b7a29a4afe2885537f3155033c4c9a",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[1]"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "cluster": 3,
+      "source": "Header",
+      "target": "Header (header3)",
+      "key": "header3",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+          "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+          "uuid": "78ea4bc5-01-15f79d362ea2ed4171e4bb36ac71eb3d35428ed4",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[2]/div[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+          "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+          "uuid": "d23406c3-01-15f79d362ea2ed4171e4bb36ac71eb3d35428ed4",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[2]/div[1]"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+          "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+          "uuid": "f7c11c2e-01-15f79d362ea2ed4171e4bb36ac71eb3d35428ed4",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[2]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "unknown",
+      "cluster": 4,
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+          "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+          "uuid": "78ea4bc5-13-4531b61fff2a962fe57a4760db467d41891b0ce8",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/footer[1]/div[2]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+          "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+          "uuid": "d23406c3-11-4531b61fff2a962fe57a4760db467d41891b0ce8",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/footer[1]/div[2]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+          "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+          "uuid": "f7c11c2e-13-4531b61fff2a962fe57a4760db467d41891b0ce8",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/footer[1]/div[2]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 5,
+      "source": "Columns block",
+      "target": "Columns block (columns5)",
+      "key": "columns5",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+          "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+          "uuid": "78ea4bc5-07-fc25f8f06abaebf816ce80f20adfca6abbd63095",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[4]"
+        }
+      ]
+    },
+    {
+      "name": "Accordion",
+      "cluster": 6,
+      "source": "Accordion",
+      "target": "Accordion (accordion6)",
+      "key": "accordion6",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+          "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+          "uuid": "f7c11c2e-09-135789b41de4926df83b2057061f2424203bc9b9",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[7]/div[1]/section[1]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 7,
+      "source": "Columns block",
+      "target": "Columns block (columns7)",
+      "key": "columns7",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+          "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+          "uuid": "78ea4bc5-05-005e2a8c7caf56093390d80fa0debef500624802",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Accordion",
+      "cluster": 8,
+      "source": "Accordion",
+      "target": "Accordion (accordion8)",
+      "key": "accordion8",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+          "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+          "uuid": "78ea4bc5-09-063a53c021cfd9d9da21555dc3293e7adfe591ca",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[5]/div[1]/section[1]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 9,
+      "source": "Cards",
+      "target": "Cards (cards9)",
+      "key": "cards9",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+          "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+          "uuid": "f7c11c2e-07-c2ac80e3b9ad03943d9cc8f5e38c2bdae7c33418",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[6]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 10,
+      "source": "Columns block",
+      "target": "Columns block (columns10)",
+      "key": "columns10",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+          "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+          "uuid": "a9ddfda1-03-005e2a8c7caf56093390d80fa0debef500624802",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 11,
+      "source": "Columns block",
+      "target": "Columns block (columns11)",
+      "key": "columns11",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+          "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+          "uuid": "78ea4bc5-04-13db3d1e87a193ff5444cbe24779175f92a6a52e",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "cluster": 12,
+      "source": "Header",
+      "target": "Header (header12)",
+      "key": "header12",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+          "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+          "uuid": "a9ddfda1-01-15f79d362ea2ed4171e4bb36ac71eb3d35428ed4",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[2]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 13,
+      "source": "Columns block",
+      "target": "Columns block (columns13)",
+      "key": "columns13",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+          "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+          "uuid": "78ea4bc5-12-fc5783d9df26e72ae96ef78ac5cfd8ed3be3e4e2",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/footer[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Accordion",
+      "cluster": 14,
+      "source": "Accordion",
+      "target": "Accordion (accordion14)",
+      "key": "accordion14",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+          "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+          "uuid": "d23406c3-09-5edccdceb9255ddf5070c7325acf37bf31c1bc1c",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[6]/div[1]/section[1]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 15,
+      "source": "Cards",
+      "target": "Cards (cards15)",
+      "key": "cards15",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+          "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+          "uuid": "a9ddfda1-07-c2ac80e3b9ad03943d9cc8f5e38c2bdae7c33418",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[6]"
+        }
+      ]
+    },
+    {
+      "name": "Cards (no images)",
+      "cluster": 16,
+      "source": "Cards",
+      "target": "Cards (cardsNoImages16)",
+      "key": "cardsNoImages16",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+          "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+          "uuid": "d23406c3-05-35243f0a1da3c93105627b6efc586ed9b268c965",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]"
+        }
+      ]
+    },
+    {
+      "name": "Accordion",
+      "cluster": 17,
+      "source": "Accordion",
+      "target": "Accordion (accordion17)",
+      "key": "accordion17",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/checking/overview.aspx",
+          "urlHash": "2939b6f930065b8d21273c25c01507c13ae023a8",
+          "uuid": "2939b6f9-06-f535e3c9c1be11cec8d14dc4e29730ee1cb0657d",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/section[1]/div[1]/div[2]",
+          "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 18,
+      "source": "Cards",
+      "target": "Cards (cards18)",
+      "key": "cards18",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+          "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+          "uuid": "a9ddfda1-04-35243f0a1da3c93105627b6efc586ed9b268c965",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]"
+        }
+      ]
+    },
+    {
+      "name": "Cards (no images)",
+      "cluster": 19,
+      "source": "Cards",
+      "target": "Cards (cardsNoImages19)",
+      "key": "cardsNoImages19",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+          "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+          "uuid": "f7c11c2e-05-fc25f8f06abaebf816ce80f20adfca6abbd63095",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[4]"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 20,
+      "source": "Hero",
+      "target": "Hero (hero20)",
+      "key": "hero20",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+          "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+          "uuid": "a9ddfda1-02-13db3d1e87a193ff5444cbe24779175f92a6a52e",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 21,
+      "source": "Cards",
+      "target": "Cards (cards21)",
+      "key": "cards21",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/checking/overview.aspx",
+          "urlHash": "2939b6f930065b8d21273c25c01507c13ae023a8",
+          "uuid": "2939b6f9-03-c45c55c2c88384538a00d361852999c1fc22b55c",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 22,
+      "source": "Cards",
+      "target": "Cards (cards22)",
+      "key": "cards22",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+          "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+          "uuid": "d23406c3-07-1e07017fa140762fd524957414ee615c5f0309d6",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[5]"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "cluster": 23,
+      "source": "Header",
+      "target": "Header (header23)",
+      "key": "header23",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+          "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+          "uuid": "a9ddfda1-00-b87d77aa63b7a29a4afe2885537f3155033c4c9a",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/header[1]/section[1]"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "cluster": 24,
+      "source": "Header",
+      "target": "Header (header24)",
+      "key": "header24",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/checking/overview.aspx",
+          "urlHash": "2939b6f930065b8d21273c25c01507c13ae023a8",
+          "uuid": "2939b6f9-01-d68819774b14c3d6778b53ad202f6ebf14ebf4b0",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/header[1]/section[2]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Cards (no images)",
+      "cluster": 25,
+      "source": "Cards",
+      "target": "Cards (cardsNoImages25)",
+      "key": "cardsNoImages25",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/checking/overview.aspx",
+          "urlHash": "2939b6f930065b8d21273c25c01507c13ae023a8",
+          "uuid": "2939b6f9-04-9604eacf8469e6e0fc6b36ce6c49d4831b4bd2bd",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[4]"
+        }
+      ]
+    },
+    {
+      "name": "unknown",
+      "cluster": 26,
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/checking/overview.aspx",
+          "urlHash": "2939b6f930065b8d21273c25c01507c13ae023a8",
+          "uuid": "2939b6f9-09-0c0144f13a512f5f356240084e1c35c7d09b6d96",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/footer[1]/div[2]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 27,
+      "source": "Hero",
+      "target": "Hero (hero27)",
+      "key": "hero27",
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+          "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+          "uuid": "a9ddfda1-05-fc25f8f06abaebf816ce80f20adfca6abbd63095",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[4]"
+        }
+      ]
+    },
+    {
+      "name": "unknown",
+      "cluster": 28,
+      "instances": [
+        {
+          "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+          "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+          "uuid": "a9ddfda1-10-4531b61fff2a962fe57a4760db467d41891b0ce8",
+          "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[1]/footer[1]/div[2]",
+          "section": "section-2"
+        }
+      ]
+    }
+  ],
+  "outliers": [
+    {
+      "url": "https://www.citizensbank.com/checking/overview.aspx",
+      "urlHash": "2939b6f930065b8d21273c25c01507c13ae023a8",
+      "uuid": "2939b6f9-02-4130e0169ed4c673a7f233fd2e283b1580f034f9",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.citizensbank.com/checking/overview.aspx",
+      "urlHash": "2939b6f930065b8d21273c25c01507c13ae023a8",
+      "uuid": "2939b6f9-05-7f1f825f982b4fd609e3813980fb30d2c31f0973",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/section[1]/div[1]/div[1]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://www.citizensbank.com/checking/overview.aspx",
+      "urlHash": "2939b6f930065b8d21273c25c01507c13ae023a8",
+      "uuid": "2939b6f9-07-b555d30f5fcf69345119f18ca6c9538eae518de7",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/section[1]/div[1]/div[3]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://www.citizensbank.com/checking/overview.aspx",
+      "urlHash": "2939b6f930065b8d21273c25c01507c13ae023a8",
+      "uuid": "2939b6f9-10-d72caa907dc624342957e5b0bf1f3f76c63d7ee7",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[3]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+      "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+      "uuid": "78ea4bc5-02-07c557d6636fc1961324aaf292245586a3c75f16",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[2]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+      "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+      "uuid": "78ea4bc5-03-ffec49e1de0e8204a39b453228fe21e918bc4786",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[4]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+      "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+      "uuid": "78ea4bc5-06-35243f0a1da3c93105627b6efc586ed9b268c965",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+      "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+      "uuid": "78ea4bc5-08-ec117166b05a1f97465ae10f791ea5cdb56316a5",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[5]/div[1]/section[1]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+      "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+      "uuid": "78ea4bc5-10-2859b4bb8230d0efe045de7bd4541796cf9e6532",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[5]/div[1]/section[1]/div[1]/div[3]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+      "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+      "uuid": "78ea4bc5-11-517a94db4be9e28b45ddc57a88330ab3a851dd0d",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+      "urlHash": "78ea4bc536fbc566a848ed9937abe239b3c38564",
+      "uuid": "78ea4bc5-14-0bf9a3e71a09711a71dc63059692e45437bb24dd",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[3]"
+    },
+    {
+      "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+      "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+      "uuid": "a9ddfda1-06-1e07017fa140762fd524957414ee615c5f0309d6",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[5]"
+    },
+    {
+      "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+      "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+      "uuid": "a9ddfda1-08-39b316bb9806aee9929f4f4ced3405f91cf1222a",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[7]"
+    },
+    {
+      "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
+      "urlHash": "a9ddfda12cc9a67b742df355ebbc7d161d775558",
+      "uuid": "a9ddfda1-11-2f6860e7141cbad2cc8dcc0f57766f5756bc9ab6",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[2]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+      "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+      "uuid": "d23406c3-02-d72caa907dc624342957e5b0bf1f3f76c63d7ee7",
+      "xpath": "/html[1]/body[1]/div[1]/div[1]/div[3]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+      "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+      "uuid": "d23406c3-03-13db3d1e87a193ff5444cbe24779175f92a6a52e",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+      "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+      "uuid": "d23406c3-04-005e2a8c7caf56093390d80fa0debef500624802",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+      "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+      "uuid": "d23406c3-06-fc25f8f06abaebf816ce80f20adfca6abbd63095",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[4]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+      "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+      "uuid": "d23406c3-08-7a7c680a9153d213b27f216968fc96d057e31c8d",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[6]/div[1]/section[1]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
+      "urlHash": "d23406c313077f53ef23e86fd26654d0eb07ab80",
+      "uuid": "d23406c3-12-2f6860e7141cbad2cc8dcc0f57766f5756bc9ab6",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[2]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+      "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+      "uuid": "f7c11c2e-02-13db3d1e87a193ff5444cbe24779175f92a6a52e",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+      "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+      "uuid": "f7c11c2e-03-005e2a8c7caf56093390d80fa0debef500624802",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+      "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+      "uuid": "f7c11c2e-04-35243f0a1da3c93105627b6efc586ed9b268c965",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[3]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+      "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+      "uuid": "f7c11c2e-06-1e07017fa140762fd524957414ee615c5f0309d6",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[5]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+      "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+      "uuid": "f7c11c2e-08-2a5706e3f8c2cae170b2f382c6fd5bc40049e583",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[7]/div[1]/section[1]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+      "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+      "uuid": "f7c11c2e-10-ca8f3ba09cb1de766f2b2a4d7dc62f086b7e40d9",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[1]/div[7]/div[1]/section[1]/div[1]/div[3]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+      "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+      "uuid": "f7c11c2e-11-517a94db4be9e28b45ddc57a88330ab3a851dd0d",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+      "urlHash": "f7c11c2eb47250da73bf51416aff2243e4e32bb7",
+      "uuid": "f7c11c2e-14-2f6860e7141cbad2cc8dcc0f57766f5756bc9ab6",
+      "xpath": "/html[1]/body[1]/div[1]/div[2]/div[2]/div[2]"
+    }
+  ],
+  "sections": [
+    {
+      "name": "section-1",
+      "background": "rgb(246, 246, 246) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 3
+    },
+    {
+      "name": "section-2",
+      "background": "rgb(242, 241, 241) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 5
+    }
+  ]
+}
