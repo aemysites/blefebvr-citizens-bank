@@ -1,51 +1,660 @@
 {
   "originUrl": "https://www.citizensbank.com",
   "aborted": false,
+  "lastCrawled": "https://www.citizensbank.com/",
   "urls": [
     {
+      "url": "https://www.citizensbank.com/about-our-ads/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-our-ads/overview-aspx",
+      "id": "401087424e5429d498b9bc39f2164d36417ada8c"
+    },
+    {
+      "url": "https://www.citizensbank.com/about-us/community.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-us/community-aspx",
+      "id": "bba56eea4f4ba128b2b41acbb08a4090b5c1270f"
+    },
+    {
+      "url": "https://www.citizensbank.com/about-us/community/citizens-impact.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-us/community/citizens-impact-aspx",
+      "id": "26733c3a7a9b5d7399ec6912bfcd9a55929a5b53"
+    },
+    {
+      "url": "https://www.citizensbank.com/about-us/our-company/awards-and-recognition.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-company/awards-and-recognition-aspx",
+      "id": "0a528da89528e2ce83e01692ee1bd8bb02d5c028"
+    },
+    {
+      "url": "https://www.citizensbank.com/about-us/our-company/corporate-sponsorships.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-company/corporate-sponsorships-aspx",
+      "id": "ba5ab1a0e4c1507e18481fe871fd84e70281e882"
+    },
+    {
+      "url": "https://www.citizensbank.com/about-us/our-company/leadership-team.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-company/leadership-team-aspx",
+      "id": "5354b4af93408a069c0cc5181901fe174cb39b7a"
+    },
+    {
+      "url": "https://www.citizensbank.com/about-us/our-company/our-history.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-company/our-history-aspx",
+      "id": "66f2f5e9c649a71ba853689b5860e6a2f2b5a03a"
+    },
+    {
+      "url": "https://www.citizensbank.com/about-us/our-company/our-vision-and-values.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-company/our-vision-and-values-aspx",
+      "id": "8ff9abb7aca8d58495932f8d4b7d0c0546743def"
+    },
+    {
+      "url": "https://www.citizensbank.com/about-us/our-company/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-company/overview-aspx",
+      "id": "c557a4a470b14176d2af762978b1c55513171478"
+    },
+    {
+      "url": "https://www.citizensbank.com/about-us/our-company/suppliers.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-us/our-company/suppliers-aspx",
+      "id": "7fa6136eeba2d895aa2546d77e666c185d232d13"
+    },
+    {
+      "url": "https://www.citizensbank.com/about-us/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-us/overview-aspx",
+      "id": "597dd006332a3509c1c5f119d01f1f4438318114"
+    },
+    {
+      "url": "https://www.citizensbank.com/about-us/sustainability-impact.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-us/sustainability-impact-aspx",
+      "id": "0890e997fde1fc1cd00dd257edb1d056f429b17c"
+    },
+    {
+      "url": "https://www.citizensbank.com/about-us/sustainability-impact/climate.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-us/sustainability-impact/climate-aspx",
+      "id": "3535b6657b18a58aded29682be3efbe980d2e0e4"
+    },
+    {
+      "url": "https://www.citizensbank.com/about-us/sustainability-impact/diversity-equity-and-inclusion.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-us/sustainability-impact/diversity-equity-and-inclusion-aspx",
+      "id": "f0b124fbc06cb00debee35daa02695b02cba2987"
+    },
+    {
+      "url": "https://www.citizensbank.com/about-us/sustainability-impact/esg.aspx",
+      "source": "CRAWL",
+      "targetPath": "/about-us/sustainability-impact/esg-aspx",
+      "id": "73ad05adb3cd05634cbea0e2f569cb80c36ed421"
+    },
+    {
+      "url": "https://www.citizensbank.com/account-pdfs/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/account-pdfs/overview-aspx",
+      "id": "1a0a077f7871e7ece162b87c86c4176541ac1100"
+    },
+    {
+      "url": "https://www.citizensbank.com/account-safeguards/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/account-safeguards/overview-aspx",
+      "id": "edc3678e9f44c6175d6c11e7d525de6d4a0c9019"
+    },
+    {
+      "url": "https://www.citizensbank.com/account-safeguards/privacy.aspx",
+      "source": "CRAWL",
+      "targetPath": "/account-safeguards/privacy-aspx",
+      "id": "3062189440b435903f2cdd315f6fa64f3d146a71"
+    },
+    {
+      "url": "https://www.citizensbank.com/ada-compliance/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/ada-compliance/overview-aspx",
+      "id": "9310dc1b933022a6eb6271f2962f1856aa76b48d"
+    },
+    {
       "url": "https://www.citizensbank.com/checking/overview.aspx",
-      "source": "MANUAL",
-      "targetPath": "/checking/overview",
+      "source": "CRAWL",
+      "targetPath": "/checking/overview-aspx",
       "id": "2939b6f930065b8d21273c25c01507c13ae023a8"
     },
     {
+      "url": "https://www.citizensbank.com/corporate-finance/capability/capital-markets/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/corporate-finance/capability/capital-markets/overview-aspx",
+      "id": "8c078d0a90777f21f132cd6bf7e16280ef2769bf"
+    },
+    {
+      "url": "https://www.citizensbank.com/corporate-finance/capability/credit-card-and-payment-services/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/corporate-finance/capability/credit-card-and-payment-services/overview-aspx",
+      "id": "e35ddf7bb365f9bd0bb59d698a7809ef268f0b03"
+    },
+    {
+      "url": "https://www.citizensbank.com/corporate-finance/capability/financing/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/corporate-finance/capability/financing/overview-aspx",
+      "id": "a6020ab0ffaf130c3a4e042bd1c1190c4d5933c8"
+    },
+    {
+      "url": "https://www.citizensbank.com/corporate-finance/capability/risk-management/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/corporate-finance/capability/risk-management/overview-aspx",
+      "id": "4b3bccdc3dea2c00a31a50b6fc1302b29917da49"
+    },
+    {
+      "url": "https://www.citizensbank.com/corporate-finance/capability/treasury-management/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/corporate-finance/capability/treasury-management/overview-aspx",
+      "id": "cfdb77ab18232e66382f898644642fade3fb5c35"
+    },
+    {
+      "url": "https://www.citizensbank.com/corporate-finance/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/corporate-finance/overview-aspx",
+      "id": "2d32c35a03e7dbfe57e55d7bcc5ab46138e0cda9"
+    },
+    {
       "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
-      "source": "MANUAL",
-      "targetPath": "/credit-cards/overview",
+      "source": "CRAWL",
+      "targetPath": "/credit-cards/overview-aspx",
       "id": "a9ddfda12cc9a67b742df355ebbc7d161d775558"
     },
     {
+      "url": "https://www.citizensbank.com/customer-service/contact-us.aspx",
+      "source": "CRAWL",
+      "targetPath": "/customer-service/contact-us-aspx",
+      "id": "0867bad5df3ce74050fc1e4de539f5359ec8f3f9"
+    },
+    {
+      "url": "https://www.citizensbank.com/customer-service/faqs/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/customer-service/faqs/overview-aspx",
+      "id": "9cd51423fccb4e510b47c1866f3c7d9911bdf09f"
+    },
+    {
+      "url": "https://www.citizensbank.com/customer-service/forms-docs.aspx",
+      "source": "CRAWL",
+      "targetPath": "/customer-service/forms-docs-aspx",
+      "id": "8e15cb8de1c7f90c94c5a97d12ae389564219186"
+    },
+    {
+      "url": "https://www.citizensbank.com/customer-service/pay-my-loan.aspx",
+      "source": "CRAWL",
+      "targetPath": "/customer-service/pay-my-loan-aspx",
+      "id": "3f86570e1413223d41ea72d3f760fbb45e43ad83"
+    },
+    {
+      "url": "https://www.citizensbank.com/es/customer-service/branch-locator.aspx",
+      "source": "CRAWL",
+      "targetPath": "/es/customer-service/branch-locator-aspx",
+      "id": "e6c8510c96906b70371f20d04b43167d6d8b679f"
+    },
+    {
+      "url": "https://www.citizensbank.com/es/homepage.aspx",
+      "source": "CRAWL",
+      "targetPath": "/es/homepage-aspx",
+      "id": "d680ecc0daa4219ebacf3f28279b47365e9f869b"
+    },
+    {
+      "url": "https://www.citizensbank.com/financial-calculators/business-loan-calculator.aspx",
+      "source": "CRAWL",
+      "targetPath": "/financial-calculators/business-loan-calculator-aspx",
+      "id": "ff14aeacb8a0f0f6821bdd5f86de48992067cdcf"
+    },
+    {
+      "url": "https://www.citizensbank.com/financial-calculators/equipment-loan-calculator.aspx",
+      "source": "CRAWL",
+      "targetPath": "/financial-calculators/equipment-loan-calculator-aspx",
+      "id": "afbf5872f66a9b6904b43e39250a8a5521797185"
+    },
+    {
+      "url": "https://www.citizensbank.com/home-equity-loans/home-equity-line-of-credit-heloc.aspx",
+      "source": "CRAWL",
+      "targetPath": "/home-equity-loans/home-equity-line-of-credit-heloc-aspx",
+      "id": "70f60207f944966fd93306f08e869c22c591949f"
+    },
+    {
+      "url": "https://www.citizensbank.com/homepage.aspx",
+      "source": "CRAWL",
+      "targetPath": "/homepage-aspx",
+      "id": "1f4186ca59bca4248202175b3ada9b410daa48e6"
+    },
+    {
+      "url": "https://www.citizensbank.com/investing-and-wealth-management/insights-and-thought-leadership.aspx",
+      "source": "CRAWL",
+      "targetPath": "/investing-and-wealth-management/insights-and-thought-leadership-aspx",
+      "id": "9ba88ea06628a8c43ac06eb4aaa03748cf2e87d3"
+    },
+    {
+      "url": "https://www.citizensbank.com/investing-and-wealth-management/plan-your-financial-goals.aspx",
+      "source": "CRAWL",
+      "targetPath": "/investing-and-wealth-management/plan-your-financial-goals-aspx",
+      "id": "5c20666af1421a0259b424870f352227a0a0a70c"
+    },
+    {
+      "url": "https://www.citizensbank.com/investing-and-wealth-management/products-services-and-calculators.aspx",
+      "source": "CRAWL",
+      "targetPath": "/investing-and-wealth-management/products-services-and-calculators-aspx",
+      "id": "b3dc590699b8979496ac91b6dd720eb1a790e38f"
+    },
+    {
+      "url": "https://www.citizensbank.com/investing-and-wealth-management/products-services-and-calculators/financial-calculators/working-capital-calculator.aspx",
+      "source": "CRAWL",
+      "targetPath": "/investing-and-wealth-management/products-services-and-calculators/financial-calculators/working-capital-calculator-aspx",
+      "id": "ef8f83d0eb4f092c6a26f23f0b4299852656b564"
+    },
+    {
+      "url": "https://www.citizensbank.com/investing-and-wealth-management/services/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/investing-and-wealth-management/services/overview-aspx",
+      "id": "f291ac3da79eb6eeba8b560f6f237a58a2da8da4"
+    },
+    {
+      "url": "https://www.citizensbank.com/investing-and-wealth-management/wealth-advisors.aspx",
+      "source": "CRAWL",
+      "targetPath": "/investing-and-wealth-management/wealth-advisors-aspx",
+      "id": "009eb2e8ff4ddd75849c9e0dd3d81112d5867730"
+    },
+    {
+      "url": "https://www.citizensbank.com/learning/college/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/learning/college/overview-aspx",
+      "id": "5be5d9d9d06acc0305b06452814b68a78d10697b"
+    },
+    {
+      "url": "https://www.citizensbank.com/learning/financial-planning.aspx",
+      "source": "CRAWL",
+      "targetPath": "/learning/financial-planning-aspx",
+      "id": "22e2139fb5fa9609dc99e5fbdef2a56a331475c1"
+    },
+    {
+      "url": "https://www.citizensbank.com/learning/home-ownership.aspx",
+      "source": "CRAWL",
+      "targetPath": "/learning/home-ownership-aspx",
+      "id": "5ac780b53e8bacd2d0764c7efda366c23921712f"
+    },
+    {
+      "url": "https://www.citizensbank.com/learning/managing-your-finances.aspx",
+      "source": "CRAWL",
+      "targetPath": "/learning/managing-your-finances-aspx",
+      "id": "c238d5e1dccd7361dc3b053058a1c5806f9f1291"
+    },
+    {
+      "url": "https://www.citizensbank.com/learning/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/learning/overview-aspx",
+      "id": "51939b7e9ffd7516cecdd552d24950fbb76b5d7b"
+    },
+    {
+      "url": "https://www.citizensbank.com/learning/research-insights-center.aspx",
+      "source": "CRAWL",
+      "targetPath": "/learning/research-insights-center-aspx",
+      "id": "c724fd1bceff1e97ac5701c369431b1bfe916af3"
+    },
+    {
+      "url": "https://www.citizensbank.com/loans/build-a-home.aspx",
+      "source": "CRAWL",
+      "targetPath": "/loans/build-a-home-aspx",
+      "id": "9b026c6475f5d9e01c262ead62c639790b546e6f"
+    },
+    {
+      "url": "https://www.citizensbank.com/loans/home-mortgage.aspx",
+      "source": "CRAWL",
+      "targetPath": "/loans/home-mortgage-aspx",
+      "id": "51a481accb1b528dce09a7c97a86568d88672af6"
+    },
+    {
+      "url": "https://www.citizensbank.com/loans/mortgage-refinance.aspx",
+      "source": "CRAWL",
+      "targetPath": "/loans/mortgage-refinance-aspx",
+      "id": "8b731581088ca78b3aa9edd5f6a5a7abed632307"
+    },
+    {
+      "url": "https://www.citizensbank.com/private-banking/areas-of-focus/commercial-real-estate.aspx",
+      "source": "CRAWL",
+      "targetPath": "/private-banking/areas-of-focus/commercial-real-estate-aspx",
+      "id": "cc130ebd8e6cf1cab2c0461ff129e646cfe44035"
+    },
+    {
+      "url": "https://www.citizensbank.com/private-banking/areas-of-focus/individuals-and-families.aspx",
+      "source": "CRAWL",
+      "targetPath": "/private-banking/areas-of-focus/individuals-and-families-aspx",
+      "id": "46e33927a49c9355f881af6df5fe6e17f7fe1a16"
+    },
+    {
+      "url": "https://www.citizensbank.com/private-banking/areas-of-focus/innovation-banking.aspx",
+      "source": "CRAWL",
+      "targetPath": "/private-banking/areas-of-focus/innovation-banking-aspx",
+      "id": "d68aa19632c2ef6ed39ef105f1370cc318ec4572"
+    },
+    {
+      "url": "https://www.citizensbank.com/private-banking/areas-of-focus/nonprofits-private-foundations.aspx",
+      "source": "CRAWL",
+      "targetPath": "/private-banking/areas-of-focus/nonprofits-private-foundations-aspx",
+      "id": "d27eb1ab3f920b9d6d0f3c0142f92b749323fe76"
+    },
+    {
+      "url": "https://www.citizensbank.com/private-banking/areas-of-focus/private-equity-venture-capital.aspx",
+      "source": "CRAWL",
+      "targetPath": "/private-banking/areas-of-focus/private-equity-venture-capital-aspx",
+      "id": "cb01b03761d9dfd58e33875b3d33571e9cc4ee7d"
+    },
+    {
+      "url": "https://www.citizensbank.com/private-banking/areas-of-focus/professional-services.aspx",
+      "source": "CRAWL",
+      "targetPath": "/private-banking/areas-of-focus/professional-services-aspx",
+      "id": "036c10ada51f6ec58fb44e50acd0fd43960906fd"
+    },
+    {
+      "url": "https://www.citizensbank.com/private-banking/insights/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/private-banking/insights/overview-aspx",
+      "id": "39626aa9425751d948e8335918c6c7252db57579"
+    },
+    {
+      "url": "https://www.citizensbank.com/private-banking/locations/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/private-banking/locations/overview-aspx",
+      "id": "20fbbcf57683d46b58a7b2f871562cde23e94903"
+    },
+    {
+      "url": "https://www.citizensbank.com/private-banking/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/private-banking/overview-aspx",
+      "id": "413650184570f7403c8ab02173bde9ee44bf3cb5"
+    },
+    {
+      "url": "https://www.citizensbank.com/private-banking/services/business-banking.aspx",
+      "source": "CRAWL",
+      "targetPath": "/private-banking/services/business-banking-aspx",
+      "id": "cc908adfbd8a98ff25a1c46850c361904b6cf1ef"
+    },
+    {
+      "url": "https://www.citizensbank.com/private-banking/services/personal-banking.aspx",
+      "source": "CRAWL",
+      "targetPath": "/private-banking/services/personal-banking-aspx",
+      "id": "31f58ef5e6a69b2d66a17d80d85b2370e6e39819"
+    },
+    {
+      "url": "https://www.citizensbank.com/private-banking/services/private-wealth.aspx",
+      "source": "CRAWL",
+      "targetPath": "/private-banking/services/private-wealth-aspx",
+      "id": "29dff942ab8cd2edd2bdab6e265a8d68e9f23463"
+    },
+    {
       "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
-      "source": "MANUAL",
-      "targetPath": "/savings/cds-certificates-of-deposit/online-certificate-of-deposit",
+      "source": "CRAWL",
+      "targetPath": "/savings/cds-certificates-of-deposit/online-certificate-of-deposit-aspx",
       "id": "d23406c313077f53ef23e86fd26654d0eb07ab80"
     },
     {
       "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
-      "source": "MANUAL",
-      "targetPath": "/savings/money-market-accounts/overview",
+      "source": "CRAWL",
+      "targetPath": "/savings/money-market-accounts/overview-aspx",
       "id": "78ea4bc536fbc566a848ed9937abe239b3c38564"
     },
     {
       "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
-      "source": "MANUAL",
-      "targetPath": "/savings/savings-accounts/overview",
+      "source": "CRAWL",
+      "targetPath": "/savings/savings-accounts/overview-aspx",
       "id": "f7c11c2eb47250da73bf51416aff2243e4e32bb7"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/savings-accounts/retirement-savings-plans/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/savings/savings-accounts/retirement-savings-plans/overview-aspx",
+      "id": "2e783b366ecd42d93f9cad48a64fdf46516df063"
+    },
+    {
+      "url": "https://www.citizensbank.com/savings/savings-accounts/savings-tracker.aspx",
+      "source": "CRAWL",
+      "targetPath": "/savings/savings-accounts/savings-tracker-aspx",
+      "id": "038b121a808b27dc0713eecfd56cc9cf05ad7259"
+    },
+    {
+      "url": "https://www.citizensbank.com/search/answers.aspx?query=branch+near+me&amp;referrerPageUrl=",
+      "source": "CRAWL",
+      "targetPath": "/search/answers-aspx",
+      "id": "cfc8b23b3c693280d18243a9eda99b6513eb84be"
+    },
+    {
+      "url": "https://www.citizensbank.com/search/answers.aspx?query=branches+near+me&tabOrder=%2Clocations%2C&verticalUrl=locations.html",
+      "source": "CRAWL",
+      "targetPath": "/search/answers-aspx",
+      "id": "edcb960587b1d4030a041e4fcfd3edde4c190275"
+    },
+    {
+      "url": "https://www.citizensbank.com/site-requirements/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/site-requirements/overview-aspx",
+      "id": "a135ebf36ae48aa4b7b7f53ebda64440dee1558c"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/business-account-guides/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/business-account-guides/overview-aspx",
+      "id": "799b7427a41f0a5839e8c4c854bc90e44f67e46a"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/business-banking-online.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/business-banking-online-aspx",
+      "id": "29af9d8e5d4d82ff73ca2442fe3081539ecbfd3e"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/business-credit-cards/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/business-credit-cards/overview-aspx",
+      "id": "725f65bafa0c44be950c4024d228b6cb07fafc75"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/cash-management/autobooks/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/cash-management/autobooks/overview-aspx",
+      "id": "7cdced87ae66ac7019077d741aaa318a53e231a4"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/cash-management/cash-flow-essentials/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/cash-management/cash-flow-essentials/overview-aspx",
+      "id": "d1d9675595bd6bfcd2e5cd62d5a15d87876f5890"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/cash-management/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/cash-management/overview-aspx",
+      "id": "c1248526db55b522016143a2cc16c7143072b6a1"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/cash-management/payroll.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/cash-management/payroll-aspx",
+      "id": "38e85358882f55dfc834923bacab18f69792649e"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/checking/non-profit-account.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/checking/non-profit-account-aspx",
+      "id": "ead8057601ba7bd78836999a3fca59c79ca49c36"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/checking/overdraft-protection.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/checking/overdraft-protection-aspx",
+      "id": "75733d373d37460d210df0a63723fabed2041480"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/checking/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/checking/overview-aspx",
+      "id": "1184f2c988a42d76839f0960d314af2581413150"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/checking/specialized-accounts.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/checking/specialized-accounts-aspx",
+      "id": "2817e3431dcda2b36b751ef7cd5a1dee34de73e2"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/investing-and-benefits/business-insurance-coverage.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/investing-and-benefits/business-insurance-coverage-aspx",
+      "id": "1f416e16624d354ad83bea247f6c360f34ec0488"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/investing-and-benefits/employee-benefits-services/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/investing-and-benefits/employee-benefits-services/overview-aspx",
+      "id": "127d37acf1471e43007d01aa4effa7a6fcc1e94a"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/investing-and-benefits/investment-management.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/investing-and-benefits/investment-management-aspx",
+      "id": "d2dcf85a0a98a2f01fc2fd7e4134f914a00dbb6d"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/loans/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/loans/overview-aspx",
+      "id": "8f0c45ad7e83e2294cdfb4f28038d5d90a0460b8"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/merchant-services/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/merchant-services/overview-aspx",
+      "id": "fcfa89d0055ea2168ac08c8acea7488d7bc4766f"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/online-services/accessoptima.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/online-services/accessoptima-aspx",
+      "id": "052fc957f57d25e648a010a0b1090a545509e900"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/overview-aspx",
+      "id": "a23f47f9d21bc21c0eff178cb8f5e4bac6a1379c"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/paycheck-protection-program-forgiveness.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/paycheck-protection-program-forgiveness-aspx",
+      "id": "5ef2af5ecf32f57dba50d4918c69b9d3f224981c"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/savings/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/savings/overview-aspx",
+      "id": "b38225976f4b5312229f09492ab2fc2b1170da52"
+    },
+    {
+      "url": "https://www.citizensbank.com/small-business/sba-loans/overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/small-business/sba-loans/overview-aspx",
+      "id": "6e857c8fad2bbbbcc9df910062a5f03f3d7baceb"
+    },
+    {
+      "url": "https://www.citizensbank.com/student-loans/graduate-overview.aspx",
+      "source": "CRAWL",
+      "targetPath": "/student-loans/graduate-overview-aspx",
+      "id": "07e31883a625221b7c2ffd070b950b7a8ec8b4f8"
+    },
+    {
+      "url": "https://www.citizensbank.com/student-loans/medical-residency-refinance.aspx",
+      "source": "CRAWL",
+      "targetPath": "/student-loans/medical-residency-refinance-aspx",
+      "id": "6023cb4c1e539303c66f0c7c7cd830436551321e"
+    },
+    {
+      "url": "https://www.citizensbank.com/student-loans/multi-year-approval.aspx?WT.ac=CB_H_HPHighlightUnit_StudentLending_MA_LearnMore_A708",
+      "source": "CRAWL",
+      "targetPath": "/student-loans/multi-year-approval-aspx",
+      "id": "1dc075f554bac8a8f187022fc042d933a1f395ab"
+    },
+    {
+      "url": "https://www.citizensbank.com/student-loans/parent-student-loan-refinance.aspx",
+      "source": "CRAWL",
+      "targetPath": "/student-loans/parent-student-loan-refinance-aspx",
+      "id": "34de8d185c1111bce81b83d2bc39fe29582522f1"
+    },
+    {
+      "url": "https://www.citizensbank.com/student-loans/parent-student-loans.aspx",
+      "source": "CRAWL",
+      "targetPath": "/student-loans/parent-student-loans-aspx",
+      "id": "39fab75c18ad101da24171bf13c0b6194a6bf62b"
+    },
+    {
+      "url": "https://www.citizensbank.com/student-loans/private-student-loans.aspx",
+      "source": "CRAWL",
+      "targetPath": "/student-loans/private-student-loans-aspx",
+      "id": "bc651beee9cfd3aa1f4d993ea8c70fdaa59ca5c6"
+    },
+    {
+      "url": "https://www.citizensbank.com/student-loans/scholarship.aspx",
+      "source": "CRAWL",
+      "targetPath": "/student-loans/scholarship-aspx",
+      "id": "6c6671ef8a29a814ee2e3e429c536e8b429df91e"
+    },
+    {
+      "url": "https://www.citizensbank.com/student-loans/student-loan-refinance.aspx",
+      "source": "CRAWL",
+      "targetPath": "/student-loans/student-loan-refinance-aspx",
+      "id": "cca9af86f9843ff4e6001627cb7c5be95f1ea719"
     }
   ],
-  "lastCrawled": "MANUAL",
   "crawlOptions": {
-    "timeout": 64800000,
+    "timeout": 10000,
     "inclusionPatterns": [],
     "exclusionPatterns": [],
     "limit": 100,
     "sameDomain": true,
     "keepHash": false,
-    "strategy": "manual",
+    "strategy": "crawl",
+    "logger": {},
     "strategiesAttempted": [
-      "MANUAL"
+      "CRAWL"
     ]
   },
-  "extractionErrors": [],
-  "errorCountMessage": "none"
+  "extractionErrors": [
+    {
+      "url": "https://www.citizensbank.com/sites/cfg/account-pdfs/overview.aspx",
+      "status": "301 Moved Permanently Redirect: https://www.citizensbank.com/account-pdfs/overview.aspx"
+    },
+    {
+      "url": "https://www.citizensbank.com/corporate-finance/default.aspx",
+      "status": "301 Moved Permanently Redirect: https://www.citizensbank.com/corporate-finance/overview.aspx"
+    },
+    {
+      "url": "https://www.citizensbank.com/customer-service/FAQs/checking-accounts.aspx",
+      "status": "301 Moved Permanently Redirect: https://www.citizensbank.com/customer-service/faqs/checking-accounts.aspx"
+    },
+    {
+      "url": "https://www.citizensbank.com/customer-service/FAQs/overview.aspx",
+      "status": "301 Moved Permanently Redirect: https://www.citizensbank.com/customer-service/faqs/overview.aspx"
+    },
+    {
+      "url": [
+        "https://www.citizensbank.com/"
+      ],
+      "status": "301 Moved Permanently Redirect: https://www.citizensbank.com/homepage.aspx"
+    },
+    {
+      "url": "https://www.citizensbank.com/learning/business-banking/overview.aspx",
+      "status": "301 Moved Permanently Redirect: https://www.citizensbank.com/learning/business/overview.aspx"
+    },
+    {
+      "url": "https://www.citizensbank.com/customer-service/branch-locator.aspx",
+      "status": "302 Moved Temporarily Redirect: https://www.citizensbank.com/search/answers.aspx?query=branches+near+me&tabOrder=%2Clocations%2C&verticalUrl=locations.html"
+    }
+  ],
+  "errorCountMessage": "{\"E_301\":6,\"E_302\":1}",
+  "error": null
 }
