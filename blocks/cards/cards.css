@@ -961,3 +961,184 @@
     max-width: 100%;
   }
 }
+
+
+.cards.cardsnoimages25 {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  background: #fff;
+}
+
+.cards.cardsnoimages25 > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: auto;
+}
+
+.cards.cardsnoimages25 > ul > li {
+  border: none;
+  background: none;
+  padding: 0;
+  box-shadow: none;
+  width: auto;
+}
+
+.cards.cardsnoimages25 .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 340px;
+  padding: 0;
+  margin: 0;
+}
+
+.cards.cardsnoimages25 .cards-card-body > h4 {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.cards.cardsnoimages25 .cards-card-body > p {
+  color: #888;
+  font-size: 14px;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.cards.cardsnoimages25 .cards-card-body > p strong {
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Bullet list styling */
+.cards.cardsnoimages25 .cards-card-body > ul {
+  margin: 8px 0 8px 20px;
+  padding: 0;
+  color: #000;
+  font-size: 14px;
+  list-style-type: disc;
+}
+
+.cards.cardsnoimages25 .cards-card-body > ul > li {
+  margin-bottom: 0.5em;
+  color: #000;
+  line-height: 1.5;
+}
+
+/* Make button containers and their children left-aligned and compact */
+.cards.cardsnoimages25 .cards-card-body .button-container {
+  display: block;
+  text-align: left;
+  margin: 0 0 2px;
+  padding: 0;
+  width: 100%;
+}
+
+/* --- ACCOUNT DETAILS LINK: FORCE AS SIMPLE UNDERLINED BLUE LINK --- */
+.cards.cardsnoimages25 .cards-card-body .button-container:first-of-type .button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #0056a3;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+  display: inline;
+  text-align: left;
+  box-sizing: content-box;
+  min-width: 0;
+  min-height: 0;
+  line-height: 1.4;
+  white-space: normal;
+  cursor: pointer;
+  vertical-align: baseline;
+
+  /* Remove any inherited button look */
+  max-width: unset;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+.cards.cardsnoimages25 .cards-card-body .button-container:first-of-type .button:hover,
+.cards.cardsnoimages25 .cards-card-body .button-container:first-of-type .button:focus {
+  background: none;
+  color: #1d3ecf;
+  text-decoration: underline;
+  border: none;
+  box-shadow: none;
+}
+
+/* --- OPEN ACCOUNT BUTTON: ORANGE, LEFT-ALIGNED, ONLY AS WIDE AS TEXT --- */
+.cards.cardsnoimages25 .cards-card-body .button-container:last-of-type .button {
+  background: #d35400;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  padding: 10px 24px;
+  margin: 0;
+  text-decoration: none;
+  display: inline-block;
+  text-align: left;
+  min-width: 0;
+  max-width: 100%;
+  white-space: nowrap;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  vertical-align: baseline;
+
+  /* Remove any centering or auto width */
+  width: auto;
+  overflow: visible;
+}
+
+/* Remove underline from "Open Account" button hover/focus */
+.cards.cardsnoimages25 .cards-card-body .button-container:last-of-type .button:hover,
+.cards.cardsnoimages25 .cards-card-body .button-container:last-of-type .button:focus {
+  text-decoration: none;
+  background: #b94800;
+}
+
+/* Tighter spacing between "Account Details" and "Open Account" controls */
+.cards.cardsnoimages25 .cards-card-body .button-container:first-of-type {
+  margin-bottom: 6px;
+}
+
+.cards.cardsnoimages25 .cards-card-body .button-container:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Prevent unwanted centering in cards or containers */
+.cards.cardsnoimages25 .cards-card-body,
+.cards.cardsnoimages25 .cards-card-body > * {
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+/* Responsive stacking for mobile */
+@media (width <= 700px) {
+  .cards.cardsnoimages25 > ul {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .cards.cardsnoimages25 .cards-card-body {
+    width: 100%;
+    max-width: 400px;
+  }
+}
