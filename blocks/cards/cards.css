@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -24,4 +25,130 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+
+.cards.cards9 {
+  background: #fff;
+  padding: 40px 24px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cards.cards9 > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  max-width: 1100px;
+  place-items: start start;
+}
+
+/* Top-align card content, minimal vertical padding */
+.cards.cards9 > ul > li {
+  border: none;
+  background: none;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 12px 0 20px;
+  min-width: 0;
+}
+
+/* Icon row: horizontally center icon, minimal top margin */
+.cards.cards9 .cards-card-body:first-child {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 0;
+  margin-bottom: 20px;
+  min-height: 32px;
+}
+
+/* Icon image styling: centered, correct size */
+.cards.cards9 > ul > li img {
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  aspect-ratio: unset;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  border: none;
+}
+
+/* Headings: left-aligned, correct spacing */
+.cards.cards9 .cards-card-body + .cards-card-body h3 {
+  margin: 0 0 8px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.25;
+  text-align: left;
+  width: 100%;
+}
+
+/* Supporting text: left-aligned */
+.cards.cards9 .cards-card-body + .cards-card-body p {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+}
+
+/* Underline and color for links */
+.cards.cards9 .cards-card-body + .cards-card-body a {
+  color: #0051A8;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Remove margin/padding from inner card bodies */
+.cards.cards9 .cards-card-body {
+  margin: 0;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+}
+
+/* Responsive: stack cards vertically on small screens */
+@media (width <= 899px) {
+  .cards.cards9 > ul {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 100%;
+  }
+
+  .cards.cards9 {
+    padding: 32px 12px;
+  }
+
+  .cards.cards9 > ul > li {
+    padding: 12px 0 16px;
+  }
+}
+
+/* Chat button visual only, no text */
+.cards.cards9::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 48px;
+  height: 160px;
+  transform: translateY(-50%);
+  background: #00844F;
+  border-radius: 24px 0 0 24px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
 }
