@@ -46,7 +46,6 @@
   place-items: start start;
 }
 
-/* Top-align card content, minimal vertical padding */
 .cards.cards9 > ul > li {
   border: none;
   background: none;
@@ -59,7 +58,6 @@
   min-width: 0;
 }
 
-/* Icon row: horizontally center icon, minimal top margin */
 .cards.cards9 .cards-card-body:first-child {
   width: 100%;
   display: flex;
@@ -70,7 +68,6 @@
   min-height: 32px;
 }
 
-/* Icon image styling: centered, correct size */
 .cards.cards9 > ul > li img {
   width: 32px;
   height: 32px;
@@ -84,7 +81,6 @@
   border: none;
 }
 
-/* Headings: left-aligned, correct spacing */
 .cards.cards9 .cards-card-body + .cards-card-body h3 {
   margin: 0 0 8px;
   font-weight: 600;
@@ -95,7 +91,6 @@
   width: 100%;
 }
 
-/* Supporting text: left-aligned */
 .cards.cards9 .cards-card-body + .cards-card-body p {
   margin: 0;
   font-size: 16px;
@@ -105,14 +100,12 @@
   width: 100%;
 }
 
-/* Underline and color for links */
 .cards.cards9 .cards-card-body + .cards-card-body a {
   color: #0051A8;
   text-decoration: underline;
   font-weight: 500;
 }
 
-/* Remove margin/padding from inner card bodies */
 .cards.cards9 .cards-card-body {
   margin: 0;
   padding: 0;
@@ -122,7 +115,6 @@
   width: 100%;
 }
 
-/* Responsive: stack cards vertically on small screens */
 @media (width <= 899px) {
   .cards.cards9 > ul {
     grid-template-columns: 1fr;
@@ -139,7 +131,6 @@
   }
 }
 
-/* Chat button visual only, no text */
 .cards.cards9::after {
   display: block;
   position: absolute;
@@ -151,4 +142,116 @@
   background: #00844F;
   border-radius: 24px 0 0 24px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+}
+
+
+.cards.cards15 {
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+  position: relative;
+}
+
+.cards.cards15 > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  place-items: stretch start;
+}
+
+@media (width <= 900px) {
+  .cards.cards15 > ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 18px;
+  }
+}
+
+@media (width <= 600px) {
+  .cards.cards15 > ul {
+    grid-template-columns: 1fr;
+    gap: 12px 0;
+  }
+}
+
+.cards.cards15 > ul > li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: transparent;
+  padding: 16px 20px;
+  border: none;
+  min-height: 80px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.cards.cards15 .cards-card-body {
+  width: auto;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.cards.cards15 .cards-card-body:first-child {
+  flex: 0 0 32px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-right: 12px;
+}
+
+.cards.cards15 .cards-card-body:first-child img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.cards.cards15 .cards-card-body:last-child {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.cards.cards15 .cards-card-body:last-child > * {
+  text-align: left;
+  align-self: flex-start;
+}
+
+.cards.cards15 .cards-card-body:last-child h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #232323;
+  text-align: left;
+}
+
+.cards.cards15 .cards-card-body:last-child p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 16px;
+  color: #505050;
+  font-weight: normal;
+  text-align: left;
+}
+
+.cards.cards15 .cards-card-body:last-child sup {
+  font-size: 11px;
+  color: #888;
+  vertical-align: super;
+}
+
+.cards.cards15 button,
+.cards.cards15 a.button {
+  align-self: flex-start;
+  margin-left: 0;
+  margin-right: 0;
 }
