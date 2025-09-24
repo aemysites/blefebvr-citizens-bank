@@ -281,157 +281,6 @@
 }
 
 
-.cards.cards18 .cards-card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  color: #222;
-}
-
-.cards.cards18 .cards-card-body .button-container {
-  margin: 0;
-  padding: 0;
-}
-
-.cards.cards18 .cards-card-body .button-container:first-of-type {
-  margin-bottom: 12px;
-}
-
-.cards.cards18 .cards-card-body .button-container:nth-last-child(2) {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.cards.cards18 .cards-card-body .button-container:last-child {
-  display: contents;
-  margin-bottom: 0;
-}
-
-.cards.cards18 .cards-card-body .button-container:nth-last-child(2) a,
-.cards.cards18 .cards-card-body .button-container:last-child a {
-  display: inline-block;
-  margin: 0;
-  vertical-align: middle;
-}
-
-.cards.cards18 .cards-card-body a.button[title*="Pre-qualified"] {
-  background: #f26522;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 10px 24px;
-  border-radius: 5px;
-  text-decoration: none;
-  border: none;
-  box-shadow: none;
-  margin: 0;
-  transition: background 0.2s;
-  line-height: 1.5;
-}
-
-.cards.cards18 .cards-card-body a.button[title*="Pre-qualified"]:hover,
-.cards.cards18 .cards-card-body a.button[title*="Pre-qualified"]:focus {
-  background: #d4551c;
-}
-
-.cards.cards18 .cards-card-body a.button:not([title*="Pre-qualified"]) {
-  background: none;
-  color: #0073cf;
-  font-size: 15px;
-  text-decoration: underline;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-  line-height: 1.5;
-}
-
-.cards.cards18 > ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 32px;
-  justify-items: stretch;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.cards.cards18 > ul > li {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgb(34 34 34 / 5%);
-  border: none;
-  padding: 28px 24px;
-  box-sizing: border-box;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  transition: box-shadow 0.2s;
-}
-
-.cards.cards18 .cards-card-image {
-  margin-bottom: 20px;
-  width: 100%;
-  line-height: 0;
-}
-
-.cards.cards18 .cards-card-image img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 1px 4px rgb(34 34 34 / 12%);
-  transform: rotate(-6deg);
-  display: block;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  background: #f6f6f6;
-}
-
-.cards.cards18 .cards-card-body h3 {
-  color: #222;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0 0 8px;
-  line-height: 1.25;
-}
-
-.cards.cards18 .cards-card-body p strong {
-  color: #222;
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.cards.cards18 .cards-card-body ul {
-  margin: 12px 0 16px 18px;
-  color: #222;
-  font-size: 15px;
-  padding: 0;
-}
-
-.cards.cards18 .cards-card-body ul li {
-  margin-bottom: 6px;
-}
-
-@media (width <= 900px) {
-  .cards.cards18 > ul {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .cards.cards18 > ul > li {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-}
-
-
 .cards.cardsnoimages19.block ul {
   display: flex;
   flex-direction: row;
@@ -861,7 +710,7 @@
 .cards.cards15 > ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px 36px; /* tighter row gap, generous column gap */
+  gap: 20px 36px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -871,7 +720,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start; /* top-align */
+  justify-content: flex-start;
   background: none;
   border: none;
   box-shadow: none;
@@ -887,7 +736,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
-  margin: 0 0 10px; /* tighter space below icon */
+  margin: 0 0 10px;
   padding: 0;
 }
 
@@ -959,5 +808,191 @@
   .cards.cards15 > ul {
     grid-template-columns: 1fr;
     gap: 12px 0;
+  }
+}
+
+
+.cards.cards18 {
+  padding: 24px 0;
+  background: #fff;
+}
+
+.cards.cards18 > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-items: center;
+}
+
+.cards.cards18 > ul > li {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: none;
+  border: none;
+  padding: 24px 20px;
+  box-sizing: border-box;
+}
+
+.cards.cards18 .cards-card-image {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.cards.cards18 .cards-card-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: none;
+  transform: none;
+  background: none;
+  aspect-ratio: unset;
+  object-fit: contain;
+  display: block;
+}
+
+.cards.cards18 .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: #2b2b2b;
+  padding: 0;
+  margin: 0;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Title and subtitle (header and strong) */
+.cards.cards18 .cards-card-body h3 {
+  font-size: 20px;
+  color: #2b2b2b;
+  font-weight: bold;
+  margin: 0 0 8px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.cards.cards18 .cards-card-body p strong {
+  font-size: 16px;
+  color: #2b2b2b;
+  font-weight: 600;
+  text-align: left;
+}
+
+.cards.cards18 .cards-card-body ul {
+  margin: 12px 0 16px 20px;
+  color: #2b2b2b;
+  font-size: 16px;
+  padding: 0;
+}
+
+.cards.cards18 .cards-card-body ul li {
+  margin-bottom: 4px;
+}
+
+/* Ensure all links are left-aligned */
+.cards.cards18 .cards-card-body a {
+  text-align: left;
+}
+
+/* "Important information about rates and fees" link styling and spacing */
+.cards.cards18 .cards-card-body .button-container:first-of-type {
+  margin-bottom: 24px;
+}
+
+.cards.cards18 .cards-card-body .button-container:first-of-type .button {
+  color: #0071ce;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+/* --- Button grouping and alignment --- */
+
+/* Put the second and third .button-container in a flex row at the bottom */
+.cards.cards18 .cards-card-body .button-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+.cards.cards18 .cards-card-body .button-container:nth-of-type(2),
+.cards.cards18 .cards-card-body .button-container:nth-of-type(3) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.cards.cards18 .cards-card-body .button-container:nth-of-type(2) .button,
+.cards.cards18 .cards-card-body .button-container:nth-of-type(3) .button {
+  margin: 0;
+}
+
+/* "Get Pre-qualified" button */
+.cards.cards18 .cards-card-body a.button[title*="Pre-qualified"] {
+  background: #e86c00;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  line-height: 1.5;
+  margin-right: 8px;
+  display: inline-block;
+  transition: background 0.2s;
+}
+
+/* "Card Details" button */
+.cards.cards18 .cards-card-body a.button:not([title*="Pre-qualified"]) {
+  background: none;
+  color: #0071ce;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: underline;
+  border: none;
+  box-shadow: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+/* Responsive: stack cards vertically on small screens, stack action buttons vertically with spacing */
+@media (width <= 900px) {
+  .cards.cards18 > ul {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cards.cards18 > ul > li {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .cards.cards18 .cards-card-body .button-container:nth-of-type(2),
+  .cards.cards18 .cards-card-body .button-container:nth-of-type(3) {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
   }
 }
