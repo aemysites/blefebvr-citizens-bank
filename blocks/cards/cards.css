@@ -255,3 +255,148 @@
   margin-left: 0;
   margin-right: 0;
 }
+
+
+.cards.cardsnoimages16 {
+  width: 100%;
+  max-width: 700px;
+  margin: 48px auto;
+  padding: 0;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+/* Two cards side by side, align to top */
+.cards.cardsnoimages16 > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Remove card borders, keep background white */
+.cards.cardsnoimages16 > ul > li {
+  background: #fff;
+  box-shadow: none;
+  border: none;
+  min-width: 300px;
+  flex: 1 1 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* vertical divider */
+.cards.cardsnoimages16 > ul > li:first-child {
+  border-right: 1px solid #e6e6e6;
+}
+
+/* Card Body Padding: reasonable for top alignment */
+.cards.cardsnoimages16 .cards-card-body {
+  padding: 8px 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Headings: left align, tighter margin */
+.cards.cardsnoimages16 .cards-card-body h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #242424;
+  margin-top: 0;
+  margin-bottom: 6px;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.cards.cardsnoimages16 .cards-card-body h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #242424;
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.25;
+  text-align: left;
+}
+
+/* List Styling: less indent, tighter spacing */
+.cards.cardsnoimages16 .cards-card-body ul {
+  font-size: 15px;
+  color: #4b4b4b;
+  margin: 0 0 10px;
+  padding-left: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.cards.cardsnoimages16 .cards-card-body ul > li {
+  margin-bottom: 8px;
+  list-style-type: disc;
+}
+
+/* Button Container: left aligned, minimal margin */
+.cards.cardsnoimages16 .button-container {
+  margin-top: 6px;
+  width: auto;
+  display: block;
+  text-align: left;
+}
+
+/* Override button styles, left align, less padding */
+.cards.cardsnoimages16 .cards-card-body .button {
+  background: #d3541a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin: 0;
+  box-shadow: none;
+  transition: background 0.2s;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  display: inline-block;
+  text-align: left;
+  min-width: 0;
+}
+
+.cards.cardsnoimages16 .cards-card-body .button:hover,
+.cards.cardsnoimages16 .cards-card-body .button:focus {
+  background: #a74214;
+  color: #fff;
+}
+
+/* Responsive stacking for small screens */
+@media (width <= 700px) {
+  .cards.cardsnoimages16 {
+    max-width: 98vw;
+    margin: 32px auto;
+  }
+
+  .cards.cardsnoimages16 > ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cards.cardsnoimages16 > ul > li:first-child {
+    border-right: none;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .cards.cardsnoimages16 .cards-card-body {
+    padding: 10px 8px 16px 12px;
+  }
+}
