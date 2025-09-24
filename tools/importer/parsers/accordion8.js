@@ -1,16 +1,15 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the accordion block
+  // Find the accordion container
   const accordion = element.querySelector('.cbds-c-accordion');
   if (!accordion) return;
 
-  // Get all accordion items
-  const items = accordion.querySelectorAll(':scope > .cbds-c-accordion__item');
-
-  // Table header row: exactly one column
+  // Prepare the header row as required
   const headerRow = ['Accordion (accordion8)'];
   const rows = [headerRow];
 
+  // Get all accordion items
+  const items = accordion.querySelectorAll(':scope > .cbds-c-accordion__item');
   items.forEach((item) => {
     // Title cell: get the button text (inside h3 > button > span)
     let title = '';
@@ -21,38 +20,34 @@ export default function parse(element, { document }) {
         const span = button.querySelector('span');
         if (span) {
           title = span.textContent.trim();
+        } else {
+          title = button.textContent.trim();
         }
+      } else {
+        title = heading.textContent.trim();
       }
     }
-    if (!title) {
-      title = heading ? heading.textContent.trim() : '';
+
+    // Content cell: get the card body div
+    let contentCell = '';
+    const cardBody = item.querySelector('.cbds-c-accordion__card-body');
+    if (cardBody) {
+      contentCell = cardBody;
     }
 
-    // Content cell: get the card body (clone its children for safety)
-    let contentCell = '';
-    const body = item.querySelector('.cbds-c-accordion__card-body');
-    if (body) {
-      // Create a fragment and append all children of body
-      const frag = document.createDocumentFragment();
-      Array.from(body.childNodes).forEach((child) => {
-        frag.appendChild(child.cloneNode(true));
-      });
-      contentCell = frag;
-    }
     rows.push([title, contentCell]);
   });
 
-  // Create the block table
+  // Create the table block
   const table = WebImporter.DOMUtils.createTable(rows, document);
 
-  // Fix: Remove extra cells from header row if present (should be exactly one column)
+  // Ensure header row is a single column (no colspan)
+  // Remove any colspan attribute if present
   const firstRow = table.querySelector('tr');
-  if (firstRow && firstRow.children.length > 1) {
-    while (firstRow.children.length > 1) {
-      firstRow.removeChild(firstRow.lastChild);
-    }
+  if (firstRow && firstRow.children.length === 1) {
+    firstRow.children[0].removeAttribute('colspan');
   }
 
-  // Replace the original element with the block table
+  // Replace the original element with the new table
   element.replaceWith(table);
 }

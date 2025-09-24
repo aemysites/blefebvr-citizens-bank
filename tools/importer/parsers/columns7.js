@@ -1,35 +1,39 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Always use the target block name as the header row
+  // Always use the block name for the header row
   const headerRow = ['Columns block (columns7)'];
 
-  // Find the grid row containing the columns
+  // Defensive: Find the grid row containing the columns
   const gridRow = element.querySelector('.cbds-l-grid__row');
   if (!gridRow) return;
 
-  // Get all columns in the grid row
-  const cols = Array.from(gridRow.children).filter(col =>
-    col.classList.contains('cbds-l-grid__col--6@md') ||
-    col.classList.contains('cbds-l-grid__col--4@xl')
-  );
+  // Get all immediate column elements
+  const colEls = Array.from(gridRow.children).filter(col => col.classList.contains('cbds-l-grid__col--6@md') || col.classList.contains('cbds-l-grid__col--4@xl'));
 
-  // Defensive: if no columns found, do nothing
-  if (cols.length === 0) return;
-
-  // For each column, extract the featureGrid__item (the whole content block)
-  const contentRow = cols.map(col => {
-    // Find the main content block in each column
+  // For each column, grab the main item content and footer (if present)
+  const columns = colEls.map(col => {
     const item = col.querySelector('.dcom-c-featureGrid__item');
-    // Defensive: if not found, fallback to the column itself
-    return item || col;
+    if (!item) return '';
+    const content = item.querySelector('.dcom-c-featureGrid__item-content');
+    const footer = item.querySelector('.dcom-c-featureGrid__item-footer');
+    // Put content and footer together in one cell, if both exist
+    if (content && footer) {
+      return [content, footer];
+    } else if (content) {
+      return content;
+    } else if (footer) {
+      return footer;
+    } else {
+      return item;
+    }
   });
 
-  // Compose the table rows
-  const rows = [headerRow, contentRow];
+  // Build the table rows
+  const rows = [headerRow, columns];
 
-  // Create the table block
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+  // Create the block table
+  const block = WebImporter.DOMUtils.createTable(rows, document);
 
-  // Replace the original element with the new table
-  element.replaceWith(table);
+  // Replace the original element with the new block
+  element.replaceWith(block);
 }

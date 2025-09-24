@@ -4,54 +4,52 @@ export default function parse(element, { document }) {
   const accordion = element.querySelector('.cbds-c-accordion');
   if (!accordion) return;
 
-  // Build the table rows
-  const rows = [];
-  // Header row as required
-  const headerRow = ['Accordion (accordion6)', '']; // two columns, second is empty
-  rows.push(headerRow);
+  // Get all accordion items
+  const items = accordion.querySelectorAll(':scope > .cbds-c-accordion__item');
 
-  // Find all accordion items
-  const items = Array.from(accordion.querySelectorAll(':scope > .cbds-c-accordion__item'));
+  // Table header as required
+  const headerRow = ['Accordion (accordion6)'];
+  const rows = [headerRow];
 
-  items.forEach(item => {
-    // Title cell
+  items.forEach((item) => {
+    // Title cell: find the button inside h3.cbds-c-accordion__heading
+    let titleCell = '';
     const heading = item.querySelector('.cbds-c-accordion__heading');
-    let title = '';
     if (heading) {
       const button = heading.querySelector('button');
       if (button) {
         const span = button.querySelector('span');
         if (span) {
-          title = span.textContent.trim();
+          titleCell = span;
         } else {
-          title = button.textContent.trim();
+          titleCell = document.createTextNode(button.textContent.trim());
         }
       } else {
-        title = heading.textContent.trim();
+        titleCell = document.createTextNode(heading.textContent.trim());
       }
     }
 
-    // Content cell
-    const body = item.querySelector('.cbds-c-accordion__card-body');
+    // Content cell: the body is in .cbds-c-accordion__card-body
     let contentCell = '';
+    const body = item.querySelector('.cbds-c-accordion__card-body');
     if (body) {
-      // Use all block-level children (p, ol, ul, etc.)
-      const children = Array.from(body.children);
+      // Collect all children (preserving semantic structure)
+      const children = Array.from(body.childNodes).filter(n => {
+        return (n.nodeType === 1) || (n.nodeType === 3 && n.textContent.trim());
+      });
       if (children.length === 1) {
         contentCell = children[0];
       } else if (children.length > 1) {
         contentCell = children;
       } else {
-        contentCell = body.textContent.trim();
+        contentCell = '';
       }
     }
-    // Always push exactly two columns per row after header
-    rows.push([title, contentCell]);
+
+    rows.push([titleCell, contentCell]);
   });
 
-  // Create the table block
+  // Create the block table
   const table = WebImporter.DOMUtils.createTable(rows, document);
-
-  // Replace the original element with the new table
   element.replaceWith(table);
 }

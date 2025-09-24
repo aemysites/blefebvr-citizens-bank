@@ -1,54 +1,55 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the section containing the columns content
-  const section = element.querySelector('section.dcom-c-featureSingle');
-  if (!section) return;
-
-  // Find the grid row containing the two columns
-  const gridRow = section.querySelector('.cbds-l-grid__row');
+  // Find the grid row containing columns
+  const gridRow = element.querySelector('.cbds-l-grid__row');
   if (!gridRow) return;
-  const gridCols = Array.from(gridRow.children).filter(
-    (col) => col.classList.contains('cbds-l-grid__col--12')
-  );
-  if (gridCols.length < 2) return;
 
-  // First column: image
-  const imgCol = gridCols[0];
-  const imgWrapper = imgCol.querySelector('.dcom-c-featureSingle__image-wrapper');
-  let imageEl = null;
+  // Get the two main columns
+  const columns = Array.from(gridRow.children);
+  if (columns.length < 2) return;
+
+  // --- COLUMN 1: IMAGE ---
+  let imageCell = '';
+  const imgWrapper = columns[0].querySelector('.dcom-c-featureSingle__image-wrapper');
   if (imgWrapper) {
     const img = imgWrapper.querySelector('img');
-    if (img) imageEl = img;
+    if (img) imageCell = img;
   }
 
-  // Second column: content
-  const contentCol = gridCols[1];
-  const contentWrapper = contentCol.querySelector('.dcom-c-featureSingle__content');
-  const contentEls = [];
-  if (contentWrapper) {
+  // --- COLUMN 2: CONTENT ---
+  let contentCell = document.createElement('div');
+  const contentBlock = columns[1].querySelector('.dcom-c-featureSingle__content');
+  if (contentBlock) {
     // Heading
-    const heading = contentWrapper.querySelector('h2');
-    if (heading) contentEls.push(heading);
+    const heading = contentBlock.querySelector('h2');
+    if (heading) contentCell.appendChild(heading.cloneNode(true));
     // Paragraph and list
-    const paraDiv = contentWrapper.querySelector('.dcom-c-featureSingle__paragraph');
+    const paraDiv = contentBlock.querySelector('.dcom-c-featureSingle__paragraph');
     if (paraDiv) {
-      Array.from(paraDiv.children).forEach((el) => contentEls.push(el));
+      Array.from(paraDiv.childNodes).forEach((node) => {
+        if (node.nodeType === 1) contentCell.appendChild(node.cloneNode(true));
+      });
     }
     // Buttons
-    const btnDiv = contentWrapper.parentElement.querySelector('.dcom-c-featureSingle__buttons');
-    if (btnDiv) {
-      Array.from(btnDiv.children).forEach((btn) => contentEls.push(btn));
+    const buttonsDiv = contentBlock.querySelector('.dcom-c-featureSingle__buttons');
+    if (buttonsDiv) {
+      Array.from(buttonsDiv.children).forEach((btn) => {
+        contentCell.appendChild(btn.cloneNode(true));
+      });
     }
+  } else {
+    contentCell = '';
   }
 
-  // Compose the columns row
-  const columnsRow = [imageEl || '', contentEls.length ? contentEls : ''];
-
-  // Compose the table
+  // Table rows
   const headerRow = ['Columns block (columns10)'];
-  const rows = [headerRow, columnsRow];
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+  const contentRow = [imageCell, contentCell];
 
-  // Replace the original element
+  // Create table
+  const table = WebImporter.DOMUtils.createTable([
+    headerRow,
+    contentRow,
+  ], document);
+
   element.replaceWith(table);
 }

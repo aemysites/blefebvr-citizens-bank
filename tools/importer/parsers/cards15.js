@@ -1,41 +1,35 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find all card columns (each card is in a grid column)
-  const cardCols = Array.from(
-    element.querySelectorAll('.dcom-c-featureGrid__item')
-  );
-
-  const rows = [];
-  // Block header row must match target block name exactly
+  // Header row as specified
   const headerRow = ['Cards (cards15)'];
-  rows.push(headerRow);
+  const rows = [headerRow];
 
-  cardCols.forEach((card) => {
-    // Image/Icon extraction (reference the actual <img> element)
+  // Find all card columns
+  const cardCols = element.querySelectorAll('.cbds-l-grid__row > div');
+
+  cardCols.forEach((col) => {
+    // Each col contains .dcom-c-featureGrid__item
+    const card = col.querySelector('.dcom-c-featureGrid__item');
+    if (!card) return;
+    // Icon/Image is always first child
     const img = card.querySelector('img');
-    const imgCell = img ? img : '';
-
-    // Text content extraction
+    // Content is in .dcom-c-featureGrid__item-content
     const content = card.querySelector('.dcom-c-featureGrid__item-content');
-    let textCell = '';
-    if (content) {
-      // Collect heading and paragraphs, preserving semantic meaning
-      const heading = content.querySelector('h3');
-      const paragraphs = Array.from(content.querySelectorAll('p'));
-      const cellElements = [];
-      if (heading) cellElements.push(heading);
-      paragraphs.forEach(p => cellElements.push(p));
-      // If there are elements, wrap in a fragment
-      if (cellElements.length) {
-        const frag = document.createDocumentFragment();
-        cellElements.forEach(el => frag.appendChild(el));
-        textCell = frag;
-      }
-    }
-    rows.push([imgCell, textCell]);
+    if (!img || !content) return;
+
+    // Collect all text content (not just h3 and p)
+    // This ensures we get all text, including <sup> and any other inline elements
+    const textCell = Array.from(content.childNodes)
+      .filter(node => node.nodeType === 1 || (node.nodeType === 3 && node.textContent.trim()))
+      .map(node => node.cloneNode(true));
+
+    rows.push([
+      img.cloneNode(true),
+      textCell.length === 1 ? textCell[0] : textCell
+    ]);
   });
 
-  // Create the table block
-  const block = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(block);
+  // Create table and replace
+  const table = WebImporter.DOMUtils.createTable(rows, document);
+  element.replaceWith(table);
 }

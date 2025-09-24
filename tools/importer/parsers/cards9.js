@@ -1,62 +1,37 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the feature grid section
-  const featureSection = element.querySelector('section.dcom-c-featureGrid');
-  if (!featureSection) return;
+  // Find all card columns within the feature grid row
+  const cardCols = element.querySelectorAll(':scope section .cbds-l-grid__row > div');
 
-  // Find the grid row containing the cards
-  const gridRow = featureSection.querySelector('.cbds-l-grid__row');
-  if (!gridRow) return;
+  // Table header as required by the target block
+  const headerRow = ['Cards (cards9)'];
+  const rows = [headerRow];
 
-  // Get all card columns (direct children)
-  const cardCols = Array.from(gridRow.children).filter(col =>
-    col.classList.contains('cbds-l-grid__col--6@md') ||
-    col.classList.contains('cbds-l-grid__col--4@xl')
-  );
+  // Iterate over each card column
+  cardCols.forEach((col) => {
+    const cardItem = col.querySelector('.dcom-c-featureGrid__item');
+    if (!cardItem) return;
 
-  // Prepare table rows
-  const rows = [];
-  // Header row
-  rows.push(['Cards (cards9)']);
+    // Get the image/icon element (reference, not clone)
+    const img = cardItem.querySelector('img');
 
-  // For each card, extract icon/image and content
-  cardCols.forEach(col => {
-    const card = col.querySelector('.dcom-c-featureGrid__item');
-    if (!card) return;
+    // Get the content container
+    const content = cardItem.querySelector('.dcom-c-featureGrid__item-content');
+    if (!img || !content) return;
 
-    // Find the image/icon (always present)
-    const img = card.querySelector('img');
-
-    // Find the content container
-    const content = card.querySelector('.dcom-c-featureGrid__item-content');
-    if (!content) return;
-
-    // Extract heading and description
-    const heading = content.querySelector('.dcom-c-featureGrid__item-heading');
-    // All other content (paragraphs, links, etc.)
-    const descNodes = Array.from(content.childNodes).filter(node => {
-      // Exclude the heading itself
-      return !(node.nodeType === 1 && node === heading);
+    // Compose the text cell: include all content children (preserve HTML structure)
+    const textCell = document.createElement('div');
+    Array.from(content.childNodes).forEach((node) => {
+      textCell.appendChild(node.cloneNode(true));
     });
 
-    // Compose the text cell
-    const textCell = [];
-    if (heading) textCell.push(heading);
-    descNodes.forEach(node => {
-      // Only append non-empty nodes
-      if (node.nodeType === 1 || (node.nodeType === 3 && node.textContent.trim())) {
-        textCell.push(node);
-      }
-    });
-
-    // Add row: [icon/image, text content]
-    rows.push([
-      img,
-      textCell
-    ]);
+    // Add the row: [image/icon element, text cell]
+    rows.push([img, textCell]);
   });
 
-  // Create and replace
+  // Create the table using WebImporter utility
   const table = WebImporter.DOMUtils.createTable(rows, document);
+
+  // Replace the original element with the new table
   element.replaceWith(table);
 }

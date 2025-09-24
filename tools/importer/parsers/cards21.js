@@ -1,50 +1,50 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to extract card info from featureGrid item
-  function extractCard(cardElem) {
-    // Image (mandatory)
-    const img = cardElem.querySelector('img');
+  // Helper to extract card data from each card element
+  function extractCard(cardEl) {
+    // Image: first img in card
+    const img = cardEl.querySelector('img');
 
-    // Content (title, description, etc)
-    const content = cardElem.querySelector('.dcom-c-featureGrid__item-content');
-    let cardContent = [];
+    // Content: heading, paragraphs, lists
+    const content = cardEl.querySelector('.dcom-c-featureGrid__item-content');
+    let contentParts = [];
     if (content) {
       // Heading
       const heading = content.querySelector('h3');
-      if (heading) cardContent.push(heading);
-      // All paragraphs and lists (description)
-      content.querySelectorAll('p, ul, ol').forEach((desc) => {
-        cardContent.push(desc);
+      if (heading) contentParts.push(heading);
+      // All paragraphs and lists below heading
+      content.querySelectorAll('p, ul, ol').forEach((el) => {
+        contentParts.push(el);
       });
     }
-    // Footer (CTA buttons)
-    const footer = cardElem.querySelector('.dcom-c-featureGrid__item-footer');
+
+    // Footer: CTA links
+    const footer = cardEl.querySelector('.dcom-c-featureGrid__item-footer');
+    let ctas = [];
     if (footer) {
-      // Add all links as CTAs
-      const ctas = Array.from(footer.querySelectorAll('a'));
-      if (ctas.length) {
-        // Wrap CTAs in a div for layout
-        const ctaDiv = document.createElement('div');
-        ctas.forEach(a => ctaDiv.appendChild(a));
-        cardContent.push(ctaDiv);
-      }
+      // All links in footer
+      footer.querySelectorAll('a').forEach((a) => {
+        ctas.push(a);
+      });
     }
-    return [img, cardContent];
+    // Compose right cell: content + CTAs
+    const rightCell = [...contentParts, ...ctas];
+    return [img, rightCell];
   }
 
-  // Find all card columns in the grid
-  const cardCols = element.querySelectorAll('.dcom-c-featureGrid__item');
+  // Find all card elements
+  // Defensive: find all .dcom-c-featureGrid__item inside the grid
+  const cards = Array.from(element.querySelectorAll('.dcom-c-featureGrid__item'));
 
   // Build table rows
-  const rows = [];
-  // Header row
-  rows.push(['Cards (cards21)']);
-  // Card rows
-  cardCols.forEach(cardElem => {
-    rows.push(extractCard(cardElem));
+  const headerRow = ['Cards (cards21)'];
+  const rows = [headerRow];
+  cards.forEach(cardEl => {
+    rows.push(extractCard(cardEl));
   });
 
-  // Create table and replace
-  const table = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(table);
+  // Create block table
+  const block = WebImporter.DOMUtils.createTable(rows, document);
+  // Replace element
+  element.replaceWith(block);
 }

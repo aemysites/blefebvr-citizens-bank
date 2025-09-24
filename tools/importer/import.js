@@ -12,24 +12,24 @@
 /* global WebImporter */
 /* eslint-disable no-console */
 import columns5Parser from './parsers/columns5.js';
+import accordion6Parser from './parsers/accordion6.js';
 import columns1Parser from './parsers/columns1.js';
 import columns7Parser from './parsers/columns7.js';
 import cards9Parser from './parsers/cards9.js';
 import columns10Parser from './parsers/columns10.js';
-import accordion6Parser from './parsers/accordion6.js';
-import accordion8Parser from './parsers/accordion8.js';
 import columns11Parser from './parsers/columns11.js';
-import cards15Parser from './parsers/cards15.js';
 import columns13Parser from './parsers/columns13.js';
+import accordion8Parser from './parsers/accordion8.js';
+import accordion14Parser from './parsers/accordion14.js';
 import cardsNoImages16Parser from './parsers/cardsNoImages16.js';
+import cards15Parser from './parsers/cards15.js';
 import accordion17Parser from './parsers/accordion17.js';
 import cardsNoImages19Parser from './parsers/cardsNoImages19.js';
 import cards18Parser from './parsers/cards18.js';
 import hero20Parser from './parsers/hero20.js';
-import accordion14Parser from './parsers/accordion14.js';
 import cards21Parser from './parsers/cards21.js';
-import hero27Parser from './parsers/hero27.js';
 import cards22Parser from './parsers/cards22.js';
+import hero27Parser from './parsers/hero27.js';
 import cardsNoImages25Parser from './parsers/cardsNoImages25.js';
 import headerParser from './parsers/header.js';
 import metadataParser from './parsers/metadata.js';
@@ -48,24 +48,24 @@ import {
 const parsers = {
   metadata: metadataParser,
   columns5: columns5Parser,
+  accordion6: accordion6Parser,
   columns1: columns1Parser,
   columns7: columns7Parser,
   cards9: cards9Parser,
   columns10: columns10Parser,
-  accordion6: accordion6Parser,
-  accordion8: accordion8Parser,
   columns11: columns11Parser,
-  cards15: cards15Parser,
   columns13: columns13Parser,
+  accordion8: accordion8Parser,
+  accordion14: accordion14Parser,
   cardsNoImages16: cardsNoImages16Parser,
+  cards15: cards15Parser,
   accordion17: accordion17Parser,
   cardsNoImages19: cardsNoImages19Parser,
   cards18: cards18Parser,
   hero20: hero20Parser,
-  accordion14: accordion14Parser,
   cards21: cards21Parser,
-  hero27: hero27Parser,
   cards22: cards22Parser,
+  hero27: hero27Parser,
   cardsNoImages25: cardsNoImages25Parser,
   ...customParsers,
 };
