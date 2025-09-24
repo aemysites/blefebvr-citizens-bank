@@ -268,7 +268,6 @@
   justify-content: center;
 }
 
-/* Two cards side by side, align to top */
 .cards.cardsnoimages16 > ul {
   display: flex;
   flex-direction: row;
@@ -280,7 +279,6 @@
   width: 100%;
 }
 
-/* Remove card borders, keep background white */
 .cards.cardsnoimages16 > ul > li {
   background: #fff;
   box-shadow: none;
@@ -294,12 +292,10 @@
   justify-content: flex-start;
 }
 
-/* vertical divider */
 .cards.cardsnoimages16 > ul > li:first-child {
   border-right: 1px solid #e6e6e6;
 }
 
-/* Card Body Padding: reasonable for top alignment */
 .cards.cardsnoimages16 .cards-card-body {
   padding: 8px 20px 22px 22px;
   display: flex;
@@ -310,7 +306,6 @@
   width: 100%;
 }
 
-/* Headings: left align, tighter margin */
 .cards.cardsnoimages16 .cards-card-body h3 {
   font-size: 22px;
   font-weight: 700;
@@ -331,7 +326,6 @@
   text-align: left;
 }
 
-/* List Styling: less indent, tighter spacing */
 .cards.cardsnoimages16 .cards-card-body ul {
   font-size: 15px;
   color: #4b4b4b;
@@ -346,7 +340,6 @@
   list-style-type: disc;
 }
 
-/* Button Container: left aligned, minimal margin */
 .cards.cardsnoimages16 .button-container {
   margin-top: 6px;
   width: auto;
@@ -354,7 +347,6 @@
   text-align: left;
 }
 
-/* Override button styles, left align, less padding */
 .cards.cardsnoimages16 .cards-card-body .button {
   background: #d3541a;
   color: #fff;
@@ -379,7 +371,6 @@
   color: #fff;
 }
 
-/* Responsive stacking for small screens */
 @media (width <= 700px) {
   .cards.cardsnoimages16 {
     max-width: 98vw;
@@ -398,5 +389,163 @@
 
   .cards.cardsnoimages16 .cards-card-body {
     padding: 10px 8px 16px 12px;
+  }
+}
+
+
+.cards.cards18 .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  color: #222;
+}
+
+/* Remove all vertical margins from button containers for tight grouping */
+.cards.cards18 .cards-card-body .button-container {
+  margin: 0;
+  padding: 0;
+}
+
+/* Space below info link */
+.cards.cards18 .cards-card-body .button-container:first-of-type {
+  margin-bottom: 12px;
+}
+
+/* --- ACTION ROW: Group last two .button-containers into horizontal flex row --- */
+.cards.cards18 .cards-card-body .button-container:nth-last-child(2) {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.cards.cards18 .cards-card-body .button-container:last-child {
+  display: contents; /* Allows its contents to participate in the previous flex row */
+  margin-bottom: 0;
+}
+
+/* Make sure both are inline-block in the row */
+.cards.cards18 .cards-card-body .button-container:nth-last-child(2) a,
+.cards.cards18 .cards-card-body .button-container:last-child a {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+/* --- BUTTON STYLES --- */
+.cards.cards18 .cards-card-body a.button[title*="Pre-qualified"] {
+  background: #f26522;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  transition: background 0.2s;
+  line-height: 1.5;
+}
+
+.cards.cards18 .cards-card-body a.button[title*="Pre-qualified"]:hover,
+.cards.cards18 .cards-card-body a.button[title*="Pre-qualified"]:focus {
+  background: #d4551c;
+}
+
+.cards.cards18 .cards-card-body a.button:not([title*="Pre-qualified"]) {
+  background: none;
+  color: #0073cf;
+  font-size: 15px;
+  text-decoration: underline;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+/* --- CARD STYLE --- */
+.cards.cards18 > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+  justify-items: stretch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards.cards18 > ul > li {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgb(34 34 34 / 5%);
+  border: none;
+  padding: 28px 24px;
+  box-sizing: border-box;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: box-shadow 0.2s;
+}
+
+.cards.cards18 .cards-card-image {
+  margin-bottom: 20px;
+  width: 100%;
+  line-height: 0;
+}
+
+.cards.cards18 .cards-card-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgb(34 34 34 / 12%);
+  transform: rotate(-6deg);
+  display: block;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: #f6f6f6;
+}
+
+/* --- TYPOGRAPHY AND SPACING --- */
+.cards.cards18 .cards-card-body h3 {
+  color: #222;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+.cards.cards18 .cards-card-body p strong {
+  color: #222;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.cards.cards18 .cards-card-body ul {
+  margin: 12px 0 16px 18px;
+  color: #222;
+  font-size: 15px;
+  padding: 0;
+}
+
+.cards.cards18 .cards-card-body ul li {
+  margin-bottom: 6px;
+}
+
+@media (width <= 900px) {
+  .cards.cards18 > ul {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cards.cards18 > ul > li {
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
