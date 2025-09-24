@@ -4,34 +4,31 @@ export default function parse(element, { document }) {
   const bannerSection = element.querySelector('section.dcom-c-banner');
   if (!bannerSection) return;
 
-  // 1. HEADER ROW
+  // HEADER ROW: Must match block name exactly
   const headerRow = ['Hero (hero27)'];
 
-  // 2. BACKGROUND IMAGE ROW (empty, no image in HTML)
+  // BACKGROUND IMAGE ROW: No image in this HTML, so leave blank
   const bgImageRow = [''];
 
-  // 3. CONTENT ROW
+  // CONTENT ROW: Gather heading, paragraph, CTA (in order, as elements)
   const contentWrapper = bannerSection.querySelector('.dcom-c-banner__content-wrapper');
-  let contentElements = [];
+  const content = [];
   if (contentWrapper) {
-    // Heading
     const heading = contentWrapper.querySelector('.dcom-c-banner__heading');
-    if (heading) contentElements.push(heading);
-    // Subheading/paragraph
-    const para = contentWrapper.querySelector('.dcom-c-banner__paragraph');
-    if (para) contentElements.push(para);
-    // CTA
-    const ctaDiv = contentWrapper.querySelector('.dcom-c-banner__action');
-    if (ctaDiv) {
-      const ctaLink = ctaDiv.querySelector('a');
-      if (ctaLink) contentElements.push(ctaLink);
-    }
+    if (heading) content.push(heading);
+    const paragraph = contentWrapper.querySelector('.dcom-c-banner__paragraph');
+    if (paragraph) content.push(paragraph);
+    const cta = contentWrapper.querySelector('.dcom-c-banner__action a');
+    if (cta) content.push(cta);
   }
-  const contentRow = [contentElements];
+  const contentRow = [content];
 
   // Compose the table
-  const rows = [headerRow, bgImageRow, contentRow];
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+  const table = WebImporter.DOMUtils.createTable([
+    headerRow,
+    bgImageRow,
+    contentRow,
+  ], document);
 
   element.replaceWith(table);
 }

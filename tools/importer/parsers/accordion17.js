@@ -1,53 +1,54 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the accordion container
+  // Helper to get all accordion items
   const accordion = element.querySelector('.cbds-c-accordion');
   if (!accordion) return;
 
   // Get all accordion items
   const items = accordion.querySelectorAll(':scope > .cbds-c-accordion__item');
 
-  // Table header row (must match block name)
-  const headerRow = ['Accordion (accordion17)'];
-  const rows = [headerRow];
+  // Always use the required header row
+  const rows = [
+    ['Accordion (accordion17)']
+  ];
 
   items.forEach((item) => {
     // Title cell: get the button text (inside h3 > button > span)
-    let titleCell = '';
+    let title = '';
     const heading = item.querySelector('.cbds-c-accordion__heading');
     if (heading) {
       const button = heading.querySelector('button');
       if (button) {
         const span = button.querySelector('span');
         if (span) {
-          // Use a clone to preserve formatting and not move the original
-          titleCell = span.cloneNode(true);
+          title = span.textContent.trim();
         } else {
-          titleCell = document.createTextNode(button.textContent.trim());
+          title = button.textContent.trim();
         }
       } else {
-        titleCell = document.createTextNode(heading.textContent.trim());
+        title = heading.textContent.trim();
       }
-    } else {
-      titleCell = document.createTextNode(item.textContent.trim());
     }
-
-    // Content cell: get the card body (div.cbds-c-accordion__card-body)
+    // Content cell: get the card body (may contain multiple elements)
     let contentCell = '';
     const cardBody = item.querySelector('.cbds-c-accordion__card-body');
     if (cardBody) {
-      // Clone the card body to preserve all HTML and not move the original
-      contentCell = cardBody.cloneNode(true);
-    } else {
-      contentCell = document.createTextNode('');
+      // If there are multiple children, put them all in an array
+      const children = Array.from(cardBody.childNodes).filter(
+        (node) => node.nodeType === Node.ELEMENT_NODE || (node.nodeType === Node.TEXT_NODE && node.textContent.trim())
+      );
+      if (children.length === 1) {
+        contentCell = children[0];
+      } else if (children.length > 1) {
+        contentCell = children;
+      } else {
+        contentCell = cardBody.innerHTML.trim();
+      }
     }
-
-    rows.push([titleCell, contentCell]);
+    rows.push([title, contentCell]);
   });
 
   // Create the block table
   const table = WebImporter.DOMUtils.createTable(rows, document);
-
-  // Replace the original element with the table
   element.replaceWith(table);
 }

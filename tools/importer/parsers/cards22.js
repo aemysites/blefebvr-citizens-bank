@@ -1,37 +1,29 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Select all card columns using less specific selector for flexibility
-  const cardCols = Array.from(
-    element.querySelectorAll('.cbds-l-grid__row > div')
-  );
+  // Select all card columns using a less specific selector for flexibility
+  const cardCols = element.querySelectorAll('.dcom-c-featureGrid__item');
+  const cells = [];
 
-  // Build table rows
-  const rows = [];
   // Header row as required
   const headerRow = ['Cards (cards22)'];
-  rows.push(headerRow);
+  cells.push(headerRow);
 
-  cardCols.forEach((col) => {
-    // Each col contains a .dcom-c-featureGrid__item
-    const item = col.querySelector('.dcom-c-featureGrid__item');
-    if (!item) return;
-    // Image/icon (always present)
-    const img = item.querySelector('img');
-    // Content
-    const content = item.querySelector('.dcom-c-featureGrid__item-content');
+  // For each card, extract image/icon and full text content
+  cardCols.forEach((card) => {
+    // Get image/icon (always present)
+    const img = card.querySelector('img');
+    // Get card content
+    const content = card.querySelector('.dcom-c-featureGrid__item-content');
     if (!img || !content) return;
-    // For the text cell: include ALL content blocks (not just h3/p)
-    // This ensures all text and links are included
-    const textCell = document.createElement('div');
-    Array.from(content.childNodes).forEach((node) => {
-      textCell.appendChild(node.cloneNode(true));
-    });
-    // Add row: [image, textCell]
-    rows.push([img.cloneNode(true), textCell]);
+
+    // Compose text cell: include all content from .dcom-c-featureGrid__item-content
+    const textCell = Array.from(content.childNodes).map((node) => node.cloneNode(true));
+
+    // Add row: [icon/image, text content]
+    cells.push([img.cloneNode(true), textCell]);
   });
 
-  // Create the table
-  const table = WebImporter.DOMUtils.createTable(rows, document);
-  // Replace the original element
+  // Create table and replace original element
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }
