@@ -45,6 +45,9 @@ export default function transform(hookName, element) {
       'style',
       'script',
       'noscript',
+      'header',
+      'footer',
+      '#onetrust-consent-sdk',
     ]);
   }
 
