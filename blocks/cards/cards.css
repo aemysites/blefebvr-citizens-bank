@@ -403,18 +403,15 @@
   color: #222;
 }
 
-/* Remove all vertical margins from button containers for tight grouping */
 .cards.cards18 .cards-card-body .button-container {
   margin: 0;
   padding: 0;
 }
 
-/* Space below info link */
 .cards.cards18 .cards-card-body .button-container:first-of-type {
   margin-bottom: 12px;
 }
 
-/* --- ACTION ROW: Group last two .button-containers into horizontal flex row --- */
 .cards.cards18 .cards-card-body .button-container:nth-last-child(2) {
   display: flex;
   flex-direction: row;
@@ -424,11 +421,10 @@
 }
 
 .cards.cards18 .cards-card-body .button-container:last-child {
-  display: contents; /* Allows its contents to participate in the previous flex row */
+  display: contents;
   margin-bottom: 0;
 }
 
-/* Make sure both are inline-block in the row */
 .cards.cards18 .cards-card-body .button-container:nth-last-child(2) a,
 .cards.cards18 .cards-card-body .button-container:last-child a {
   display: inline-block;
@@ -436,7 +432,6 @@
   vertical-align: middle;
 }
 
-/* --- BUTTON STYLES --- */
 .cards.cards18 .cards-card-body a.button[title*="Pre-qualified"] {
   background: #f26522;
   color: #fff;
@@ -470,7 +465,6 @@
   line-height: 1.5;
 }
 
-/* --- CARD STYLE --- */
 .cards.cards18 > ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -512,7 +506,6 @@
   background: #f6f6f6;
 }
 
-/* --- TYPOGRAPHY AND SPACING --- */
 .cards.cards18 .cards-card-body h3 {
   color: #222;
   font-size: 20px;
@@ -547,5 +540,141 @@
   .cards.cards18 > ul > li {
     max-width: 400px;
     margin: 0 auto;
+  }
+}
+
+
+.cards.cardsnoimages19.block ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 28px; /* reduced for closer card grouping */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Make cards wider and more balanced */
+.cards.cardsnoimages19.block ul > li {
+  flex: 0 1 380px;
+  min-width: 355px;
+  max-width: 410px;
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+/* Card body stacks content vertically and stretches to fill card */
+.cards.cardsnoimages19.block .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Headings: color, size, spacing */
+.cards.cardsnoimages19.block .cards-card-body h3 {
+  color: #212529;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+/* Description paragraph */
+.cards.cardsnoimages19.block .cards-card-body > p:first-of-type {
+  color: #212529;
+  font-size: 16px;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+/* Bulleted list: vertical, proper bullets, less left indent */
+.cards.cardsnoimages19.block .cards-card-body ul {
+  display: block;
+  margin: 0 0 6px 13px;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.cards.cardsnoimages19.block .cards-card-body ul li {
+  color: #212529;
+  font-size: 16px;
+  margin: 0 0 4px;
+  display: list-item;
+}
+
+.cards.cardsnoimages19.block .cards-card-body ul li a {
+  color: #005EB8;
+  text-decoration: underline;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Tighter vertical gap above CTA row */
+.cards.cardsnoimages19.block .cards-card-body p:last-of-type {
+  margin-top: 8px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 12px; /* reduced for closer button/link pairing */
+  padding: 0;
+}
+
+/* Style first link as orange button */
+.cards.cardsnoimages19.block .cards-card-body p:last-of-type a:first-child {
+  background: #d14000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 26px;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  display: inline-block;
+  line-height: 1.25;
+  margin-right: 0;
+  vertical-align: baseline;
+}
+
+/* Style second link as blue underlined text, baseline aligned */
+.cards.cardsnoimages19.block .cards-card-body p:last-of-type a:last-child {
+  color: #005EB8;
+  font-size: 16px;
+  text-decoration: underline;
+  background: none;
+  padding: 10px 0;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+
+/* Add whitespace above and below the block */
+.cards.cardsnoimages19.block {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background: #fff;
+}
+
+/* Responsive: Stack cards vertically on small screens, keep spacing */
+@media (width <= 900px) {
+  .cards.cardsnoimages19.block ul {
+    flex-direction: column;
+    gap: 28px;
+    align-items: stretch;
+  }
+
+  .cards.cardsnoimages19.block ul > li {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
   }
 }
