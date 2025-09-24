@@ -549,13 +549,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
-  gap: 28px; /* reduced for closer card grouping */
+  gap: 28px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-/* Make cards wider and more balanced */
 .cards.cardsnoimages19.block ul > li {
   flex: 0 1 380px;
   min-width: 355px;
@@ -568,7 +567,6 @@
   background: none;
 }
 
-/* Card body stacks content vertically and stretches to fill card */
 .cards.cardsnoimages19.block .cards-card-body {
   display: flex;
   flex-direction: column;
@@ -580,7 +578,6 @@
   height: 100%;
 }
 
-/* Headings: color, size, spacing */
 .cards.cardsnoimages19.block .cards-card-body h3 {
   color: #212529;
   font-size: 20px;
@@ -589,7 +586,6 @@
   line-height: 1.2;
 }
 
-/* Description paragraph */
 .cards.cardsnoimages19.block .cards-card-body > p:first-of-type {
   color: #212529;
   font-size: 16px;
@@ -597,7 +593,6 @@
   line-height: 1.5;
 }
 
-/* Bulleted list: vertical, proper bullets, less left indent */
 .cards.cardsnoimages19.block .cards-card-body ul {
   display: block;
   margin: 0 0 6px 13px;
@@ -619,18 +614,16 @@
   line-height: 1.4;
 }
 
-/* Tighter vertical gap above CTA row */
 .cards.cardsnoimages19.block .cards-card-body p:last-of-type {
   margin-top: 8px;
   margin-bottom: 0;
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  gap: 12px; /* reduced for closer button/link pairing */
+  gap: 12px;
   padding: 0;
 }
 
-/* Style first link as orange button */
 .cards.cardsnoimages19.block .cards-card-body p:last-of-type a:first-child {
   background: #d14000;
   color: #fff;
@@ -646,7 +639,6 @@
   vertical-align: baseline;
 }
 
-/* Style second link as blue underlined text, baseline aligned */
 .cards.cardsnoimages19.block .cards-card-body p:last-of-type a:last-child {
   color: #005EB8;
   font-size: 16px;
@@ -657,14 +649,12 @@
   vertical-align: baseline;
 }
 
-/* Add whitespace above and below the block */
 .cards.cardsnoimages19.block {
   padding-top: 48px;
   padding-bottom: 48px;
   background: #fff;
 }
 
-/* Responsive: Stack cards vertically on small screens, keep spacing */
 @media (width <= 900px) {
   .cards.cardsnoimages19.block ul {
     flex-direction: column;
@@ -676,5 +666,201 @@
     min-width: 0;
     max-width: 100%;
     width: 100%;
+  }
+}
+
+
+.cards.cards21 {
+  padding: 32px 0;
+  background: #fff;
+}
+
+/* Grid: three columns, adjusted for card width and spacing */
+.cards.cards21 > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 354px);
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1300px;
+}
+
+@media (width <= 1150px) {
+  .cards.cards21 > ul {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100vw;
+    gap: 28px;
+  }
+}
+
+@media (width <= 900px) {
+  .cards.cards21 > ul {
+    grid-template-columns: 1fr;
+    max-width: 95vw;
+    gap: 16px;
+  }
+}
+
+.cards.cards21 > ul > li {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgb(35 35 35 / 7%);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 27px 20px 18px;
+  box-sizing: border-box;
+  min-height: 510px;
+  border: none;
+  transition: box-shadow 0.2s;
+}
+
+.cards.cards21 > ul > li:hover {
+  box-shadow: 0 8px 32px rgb(35 35 35 / 10%);
+}
+
+/* Card image: slightly larger, less bottom margin */
+.cards.cards21 .cards-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 94px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.cards.cards21 .cards-card-image img {
+  width: 99%;
+  max-width: 328px;
+  border-radius: 10px;
+  display: block;
+  object-fit: contain;
+  background: #f9f9f9;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 4.5%);
+}
+
+/* Card body styling */
+.cards.cards21 .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 0;
+  margin: 0;
+}
+
+.cards.cards21 .cards-card-body h3 {
+  font-size: 28px;
+  font-weight: 900;
+  color: #232323;
+  margin: 0 0 10px;
+  line-height: 1.20;
+}
+
+.cards.cards21 .cards-card-body p,
+.cards.cards21 .cards-card-body ul {
+  font-size: 16px;
+  color: #232323;
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+
+.cards.cards21 .cards-card-body ul {
+  margin-bottom: 10px;
+  padding-left: 18px;
+}
+
+.cards.cards21 .cards-card-body ul li {
+  margin-bottom: 1px;
+}
+
+.cards.cards21 .cards-card-body strong {
+  color: #232323;
+  font-weight: bold;
+}
+
+.cards.cards21 .cards-card-body a[href*="citizensplus"] {
+  color: #0076C0;
+  text-decoration: underline;
+}
+
+/* Button/link row: keep on one line, right link doesn't wrap */
+.cards.cards21 .cards-card-body p:last-of-type {
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 0;
+  gap: 0;
+}
+
+.cards.cards21 .cards-card-body p:last-of-type a[title="Open Account"] {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #F36F21;
+  color: #fff;
+  font-weight: bold;
+  padding: 14px 26px;
+  border-radius: 7px;
+  font-size: 19px;
+  border: none;
+  margin: 0;
+  min-width: 140px;
+  text-align: left;
+  text-decoration: none;
+  transition: background 0.15s;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 3%);
+  line-height: 1.28;
+  flex-shrink: 0;
+}
+
+.cards.cards21 .cards-card-body p:last-of-type a[title="Open Account"]:hover {
+  background: #d75309;
+  color: #fff;
+}
+
+/* Blue link: right-aligned, no wrapping */
+.cards.cards21 .cards-card-body p:last-of-type a[title="Account Details"] {
+  background: none;
+  color: #0076C0;
+  font-weight: normal;
+  text-decoration: underline;
+  padding: 0;
+  border-radius: 0;
+  font-size: 16px;
+  margin: 0;
+  min-width: 0;
+  text-align: right;
+  transition: color 0.15s;
+  line-height: 1.28;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  flex-shrink: 0;
+}
+
+.cards.cards21 .cards-card-body p:last-of-type a[title="Account Details"]:hover {
+  color: #005fa3;
+}
+
+/* Responsive tweaks for button/link row */
+@media (width <= 600px) {
+  .cards.cards21 .cards-card-body p:last-of-type {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .cards.cards21 .cards-card-body p:last-of-type a[title="Open Account"],
+  .cards.cards21 .cards-card-body p:last-of-type a[title="Account Details"] {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+    white-space: normal;
   }
 }
