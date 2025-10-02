@@ -1,38 +1,35 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the feature grid section
-  const gridSection = element.querySelector('section.dcom-c-featureGrid');
-  if (!gridSection) return;
-  const gridRow = gridSection.querySelector('.cbds-l-grid__row');
-  if (!gridRow) return;
+  // Always use the required block name as the header
+  const headerRow = ['Columns block (columns5)'];
 
-  // Get all columns (should be 4 for this block)
-  const colDivs = Array.from(gridRow.children).filter(div => div.classList.contains('cbds-l-grid__col--6@md'));
-  if (colDivs.length === 0) return;
+  // Find the feature grid section in the element
+  const section = element.querySelector('section.dcom-c-featureGrid');
+  if (!section) return;
 
-  // Build the columns row
-  const cellsRow = colDivs.map(col => {
-    const item = col.querySelector('.dcom-c-featureGrid__item');
-    if (!item) return '';
-    // Compose cell: icon (img) + content
+  // Find all feature grid items (columns)
+  const items = section.querySelectorAll('.dcom-c-featureGrid__item');
+  if (!items.length) return;
+
+  // For each item, collect its image and content as a single cell
+  const columns = Array.from(items).map((item) => {
+    // Get the image (if any)
     const img = item.querySelector('img');
+    // Get the content div (heading, paragraphs, links)
     const content = item.querySelector('.dcom-c-featureGrid__item-content');
-    // Compose cell content as fragment
-    const frag = document.createDocumentFragment();
-    if (img) frag.appendChild(img);
-    if (content) {
-      // Use the actual content node, not a clone
-      Array.from(content.childNodes).forEach(node => frag.appendChild(node));
-    }
-    return frag.childNodes.length ? frag : '';
+    // Compose cell content: image (if present), then content (if present)
+    const cellContent = [];
+    if (img) cellContent.push(img);
+    if (content) cellContent.push(content);
+    return cellContent;
   });
 
-  // Table header must match block name exactly
-  const headerRow = ['Columns block (columns5)'];
-  const tableRows = [headerRow, cellsRow];
+  // Build the table rows
+  const rows = [headerRow, columns];
 
-  // Create table
-  const block = WebImporter.DOMUtils.createTable(tableRows, document);
-  // Replace element
-  element.replaceWith(block);
+  // Create the table block
+  const table = WebImporter.DOMUtils.createTable(rows, document);
+
+  // Replace the original element with the new table
+  element.replaceWith(table);
 }

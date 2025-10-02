@@ -1,46 +1,59 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to extract all card columns from the source HTML
-  function getCardColumns(root) {
-    // Find the deepest row with card columns
-    // Look for .cbds-l-grid__row > .cbds-l-grid__col--6@md
-    const cardRows = root.querySelectorAll('.cbds-l-grid__row');
-    for (const row of cardRows) {
-      // Use attribute selector for class containing '--6@md' to avoid invalid selector
-      const cols = row.querySelectorAll('[class*="cbds-l-grid__col--6@md"]');
-      if (cols.length > 0) {
-        return Array.from(cols);
-      }
-    }
-    return [];
-  }
+  // Find the two card columns
+  const cardCols = element.querySelectorAll('[class*="cbds-l-grid__col--6@md"]');
+  const rows = [];
 
-  // Find the main section (defensive)
-  const section = element.querySelector('section');
-  if (!section) return;
-
-  const cardColumns = getCardColumns(section);
-  if (cardColumns.length === 0) return;
-
-  // Table header as specified
+  // Required header row
   const headerRow = ['Cards (cardsNoImages25)'];
-  const rows = [headerRow];
+  rows.push(headerRow);
 
-  cardColumns.forEach((col) => {
-    // For each card column, collect all its children as a single cell
-    // Remove grid classes for cleaner output
-    col.removeAttribute('class');
-    col.removeAttribute('data-hlx-imp-color');
-    // Optionally, clean up inner elements' grid classes
-    col.querySelectorAll('[class]').forEach((el) => {
-      if (/cbds-l-grid|cbds-u-margin|cbds-u-topSpacing|cbds-l-grid__col/.test(el.className)) {
-        el.removeAttribute('class');
+  // If no card columns found, fallback to all direct children
+  const cards = cardCols.length > 0 ? cardCols : Array.from(element.children);
+
+  cards.forEach((card) => {
+    const cardContent = [];
+
+    // Heading (h4)
+    const heading = card.querySelector('h4');
+    if (heading) cardContent.push(heading.cloneNode(true));
+
+    // Subheading (h5)
+    const subheading = card.querySelector('h5');
+    if (subheading) cardContent.push(subheading.cloneNode(true));
+
+    // All <p> elements (except those that only contain a link)
+    const paragraphs = card.querySelectorAll('p');
+    paragraphs.forEach((p) => {
+      // If the <p> only contains a link, skip for now (handled as CTA below)
+      if (p.querySelector('a') && p.childNodes.length === 1 && p.firstElementChild && p.firstElementChild.tagName === 'A') {
+        return;
       }
-      el.removeAttribute('data-hlx-imp-color');
+      cardContent.push(p.cloneNode(true));
     });
-    rows.push([col]);
+
+    // All <ul> lists
+    const lists = card.querySelectorAll('ul');
+    lists.forEach((ul) => {
+      cardContent.push(ul.cloneNode(true));
+    });
+
+    // CTA link (first <a> inside a <p> that only contains the link)
+    const ctaP = Array.from(paragraphs).find((p) =>
+      p.querySelector('a') && p.childNodes.length === 1 && p.firstElementChild && p.firstElementChild.tagName === 'A'
+    );
+    if (ctaP) {
+      cardContent.push(ctaP.cloneNode(true));
+    }
+
+    // Add this card as a row (single cell)
+    if (cardContent.length > 0) {
+      rows.push([cardContent]);
+    }
   });
 
-  const table = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(table);
+  // Create the block table
+  const block = WebImporter.DOMUtils.createTable(rows, document);
+  // Replace original element
+  element.replaceWith(block);
 }

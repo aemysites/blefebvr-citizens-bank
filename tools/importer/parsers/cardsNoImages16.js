@@ -1,38 +1,41 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to build a card cell from content container
-  function buildCardCell(contentDiv) {
-    const cellContent = [];
+  // Helper to extract card content from a .dcom-c-comparison__content block
+  function extractCardContent(cardContent) {
+    const fragment = document.createDocumentFragment();
     // Heading (h3)
-    const heading = contentDiv.querySelector('h3');
-    if (heading) cellContent.push(heading);
+    const heading = cardContent.querySelector('h3');
+    if (heading) fragment.appendChild(heading.cloneNode(true));
     // Subheading (h4)
-    const subheading = contentDiv.querySelector('h4');
-    if (subheading) cellContent.push(subheading);
+    const subheading = cardContent.querySelector('h4');
+    if (subheading) fragment.appendChild(subheading.cloneNode(true));
     // List (ul)
-    const list = contentDiv.querySelector('ul');
-    if (list) cellContent.push(list);
-    // CTA (button/link)
-    const cta = contentDiv.querySelector('a');
-    if (cta) cellContent.push(cta);
-    return [cellContent];
+    const list = cardContent.querySelector('ul');
+    if (list) fragment.appendChild(list.cloneNode(true));
+    // CTA (button link)
+    const cta = cardContent.querySelector('a');
+    if (cta) fragment.appendChild(cta.cloneNode(true));
+    return fragment.childNodes.length ? fragment : '';
   }
 
-  // Find the two card content containers
-  const cardContainers = Array.from(
-    element.querySelectorAll('.dcom-c-comparison__content')
-  );
+  // Find all immediate card columns (fix selector)
+  const cardCols = element.querySelectorAll('[class*="cbds-l-grid__col--12"][class*="cbds-l-grid__col--6@md"]');
 
-  // Table header row
+  // Build table rows
   const headerRow = ['Cards (cardsNoImages16)'];
   const rows = [headerRow];
 
-  // Each card as a row
-  cardContainers.forEach((container) => {
-    rows.push(buildCardCell(container));
+  cardCols.forEach((col) => {
+    const cardContent = col.querySelector('.dcom-c-comparison__content');
+    if (cardContent) {
+      const cellContent = extractCardContent(cardContent);
+      rows.push([cellContent]);
+    }
   });
 
-  // Create table and replace
-  const table = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(table);
+  // Only create the block if at least one card is found
+  if (rows.length > 1) {
+    const block = WebImporter.DOMUtils.createTable(rows, document);
+    element.replaceWith(block);
+  }
 }

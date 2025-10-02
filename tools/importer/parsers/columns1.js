@@ -1,58 +1,43 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to get direct children by selector
-  function getDirectChildren(parent, selector) {
-    return Array.from(parent.children).filter((el) => el.matches(selector));
-  }
-
-  // Find the main grid row containing logo and columns
-  const gridRow = element.querySelector('.cbds-c-globalFooter__main');
-  if (!gridRow) return;
-
-  // Get all direct grid columns (logo + nav columns)
-  const gridCols = getDirectChildren(gridRow, 'div');
-  if (gridCols.length < 2) return;
-
-  // First column: logo
-  const logoCol = gridCols[0];
-  const logoImg = logoCol.querySelector('img');
-
-  // Second column: navigation columns
-  const navCol = gridCols[1];
-  const nav = navCol.querySelector('nav');
-  if (!nav) return;
-  const navRow = nav.querySelector('.cbds-l-grid__row');
-  if (!navRow) return;
-  const navColumns = getDirectChildren(navRow, 'div');
-
-  // Each navColumn is a column in the block, plus the logo column
-  // So total columns = 1 (logo) + navColumns.length
-  const numColumns = 1 + navColumns.length;
-
-  // Build the columns array for the second row
-  const columnsRow = [];
-
-  // First column: logo image
-  if (logoImg) {
-    columnsRow.push(logoImg);
-  } else {
-    columnsRow.push('');
-  }
-
-  // Next columns: each nav column
-  navColumns.forEach((col) => {
-    columnsRow.push(col);
-  });
-
-  // Table header row
+  // Header row as required
   const headerRow = ['Columns block (columns1)'];
 
-  // Build table cells array
-  const cells = [headerRow, columnsRow];
+  // Defensive: Find the main grid row containing the columns
+  const gridRow = element.querySelector('.cbds-l-grid__row.cbds-c-globalFooter__main');
+  if (!gridRow) return;
 
-  // Create the block table
-  const blockTable = WebImporter.DOMUtils.createTable(cells, document);
+  // Get the direct children of the grid row (logo and nav columns)
+  const columns = Array.from(gridRow.children);
+  if (columns.length < 2) return;
+
+  // First column: logo image
+  const logoCol = columns[0];
+  const logoImg = logoCol.querySelector('img');
+  // Defensive: If no image, fallback to the entire column
+  const logoCell = logoImg ? logoImg : logoCol;
+
+  // Second column: nav columns
+  const navCol = columns[1];
+  // Find the nav columns inside the navCol
+  const navColumns = navCol.querySelectorAll('.cbds-c-globalFooterPrimaryNav__column');
+  // Defensive: If not found, fallback to the whole navCol
+  let navCells;
+  if (navColumns.length > 0) {
+    navCells = Array.from(navColumns);
+  } else {
+    navCells = [navCol];
+  }
+
+  // Compose the second row: logo, then each nav column as a cell
+  const secondRow = [logoCell, ...navCells];
+
+  // Compose the table
+  const table = WebImporter.DOMUtils.createTable([
+    headerRow,
+    secondRow,
+  ], document);
 
   // Replace the original element
-  element.replaceWith(blockTable);
+  element.replaceWith(table);
 }

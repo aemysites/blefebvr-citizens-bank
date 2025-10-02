@@ -1,41 +1,42 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find all card columns (each card is in a grid column)
-  const cardCols = Array.from(
-    element.querySelectorAll('.dcom-c-featureGrid__item')
-  );
-
-  const rows = [];
-  // Block header row must match target block name exactly
+  // Always use the block name and variant in the header row
   const headerRow = ['Cards (cards15)'];
-  rows.push(headerRow);
+  const rows = [headerRow];
 
-  cardCols.forEach((card) => {
-    // Image/Icon extraction (reference the actual <img> element)
-    const img = card.querySelector('img');
-    const imgCell = img ? img : '';
-
-    // Text content extraction
-    const content = card.querySelector('.dcom-c-featureGrid__item-content');
-    let textCell = '';
-    if (content) {
-      // Collect heading and paragraphs, preserving semantic meaning
-      const heading = content.querySelector('h3');
-      const paragraphs = Array.from(content.querySelectorAll('p'));
-      const cellElements = [];
-      if (heading) cellElements.push(heading);
-      paragraphs.forEach(p => cellElements.push(p));
-      // If there are elements, wrap in a fragment
-      if (cellElements.length) {
-        const frag = document.createDocumentFragment();
-        cellElements.forEach(el => frag.appendChild(el));
-        textCell = frag;
-      }
-    }
-    rows.push([imgCell, textCell]);
+  // Find all feature grid rows (each containing cards)
+  const gridRows = element.querySelectorAll('.cbds-l-grid__row');
+  gridRows.forEach((gridRow) => {
+    // Each card is a .dcom-c-featureGrid__item inside a grid column
+    const cardCols = gridRow.querySelectorAll(':scope > div');
+    cardCols.forEach((col) => {
+      const card = col.querySelector('.dcom-c-featureGrid__item');
+      if (!card) return;
+      // Find image or icon (img)
+      const img = card.querySelector('img');
+      // Find card content (title, description)
+      const content = card.querySelector('.dcom-c-featureGrid__item-content');
+      if (!img || !content) return;
+      // Title (h3)
+      const title = content.querySelector('h3');
+      // Description (p), may be missing
+      const desc = content.querySelector('p');
+      // Build text cell content
+      const textCell = [];
+      if (title) textCell.push(title);
+      if (desc) textCell.push(desc);
+      // If no description, just use title or all content
+      if (textCell.length === 0 && content) textCell.push(...Array.from(content.childNodes).filter(n => n.nodeType === 3 || n.nodeType === 1));
+      rows.push([
+        img,
+        textCell.length > 0 ? textCell : ''
+      ]);
+    });
   });
 
-  // Create the table block
-  const block = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(block);
+  // Only create the table if there are cards (not just the header)
+  if (rows.length > 1) {
+    const table = WebImporter.DOMUtils.createTable(rows, document);
+    element.replaceWith(table);
+  }
 }

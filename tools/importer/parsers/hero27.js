@@ -1,37 +1,44 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the banner section
-  const bannerSection = element.querySelector('section.dcom-c-banner');
-  if (!bannerSection) return;
+  // Find the banner content wrapper
+  const bannerContentWrapper = element.querySelector('.dcom-c-banner__content-wrapper');
 
-  // 1. HEADER ROW
+  // Row 1: Block name
   const headerRow = ['Hero (hero27)'];
 
-  // 2. BACKGROUND IMAGE ROW (empty, no image in HTML)
-  const bgImageRow = [''];
+  // Row 2: Background image (none in source, so leave blank)
+  const imageRow = [''];
 
-  // 3. CONTENT ROW
-  const contentWrapper = bannerSection.querySelector('.dcom-c-banner__content-wrapper');
-  let contentElements = [];
-  if (contentWrapper) {
-    // Heading
-    const heading = contentWrapper.querySelector('.dcom-c-banner__heading');
-    if (heading) contentElements.push(heading);
-    // Subheading/paragraph
-    const para = contentWrapper.querySelector('.dcom-c-banner__paragraph');
-    if (para) contentElements.push(para);
-    // CTA
-    const ctaDiv = contentWrapper.querySelector('.dcom-c-banner__action');
-    if (ctaDiv) {
-      const ctaLink = ctaDiv.querySelector('a');
-      if (ctaLink) contentElements.push(ctaLink);
+  // Row 3: Content (paragraph + CTA)
+  let contentCell = [];
+  if (bannerContentWrapper) {
+    // Get all content inside the banner content
+    const contentDiv = bannerContentWrapper.querySelector('.dcom-c-banner__content');
+    if (contentDiv) {
+      // Push all children of the content div (e.g., paragraphs)
+      Array.from(contentDiv.childNodes).forEach((node) => {
+        if (node.nodeType === Node.ELEMENT_NODE || (node.nodeType === Node.TEXT_NODE && node.textContent.trim())) {
+          contentCell.push(node.cloneNode(true));
+        }
+      });
+    }
+    // Find CTA link (if present)
+    const actionDiv = bannerContentWrapper.querySelector('.dcom-c-banner__action');
+    if (actionDiv) {
+      const ctaLink = actionDiv.querySelector('a');
+      if (ctaLink) {
+        contentCell.push(ctaLink.cloneNode(true));
+      }
     }
   }
-  const contentRow = [contentElements];
+  // If nothing found, add empty string to avoid empty row
+  if (contentCell.length === 0) contentCell = [''];
+  const contentRow = [contentCell];
 
-  // Compose the table
-  const rows = [headerRow, bgImageRow, contentRow];
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+  // Build table
+  const cells = [headerRow, imageRow, contentRow];
+  const table = WebImporter.DOMUtils.createTable(cells, document);
 
+  // Replace original element
   element.replaceWith(table);
 }
