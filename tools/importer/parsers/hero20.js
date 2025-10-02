@@ -1,38 +1,52 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the main section
-  const section = element.querySelector('section');
-  if (!section) return;
+  // Find the hero section
+  const heroSection = element.querySelector('section.dcom-c-hero-commercial') || element;
 
-  // Find the image (background visual)
-  let imageEl = section.querySelector('.dcom-c-hero-commercial__image');
-  if (!imageEl) imageEl = section.querySelector('img');
+  // Find the grid row
+  const gridRow = heroSection.querySelector('.cbds-l-grid__row') || heroSection;
 
-  // Find the message container (heading, subheading)
-  const messageContainer = section.querySelector('.dcom-c-hero-commercial__message-container');
-  let headingEl = messageContainer ? messageContainer.querySelector('h1') : section.querySelector('h1');
-  let subheadingEl = messageContainer ? messageContainer.querySelector('p') : section.querySelector('p');
+  // Find content and image containers
+  const contentContainer = gridRow.querySelector('.dcom-c-hero-commercial__content-container') || gridRow;
+  const imageContainer = gridRow.querySelector('.dcom-c-hero-commercial__image-container');
 
-  // Find the CTA (button/link)
-  let ctaWrapper = section.querySelector('.cbds-c-hero-commercial__cta-wrapper');
-  let ctaLink = ctaWrapper ? ctaWrapper.querySelector('a') : section.querySelector('a');
+  // Get image element (background)
+  let imgEl = imageContainer ? imageContainer.querySelector('img') : null;
 
-  // Compose the content cell for row 3
+  // Get heading, subheading, and CTA(s)
+  const messageContainer = contentContainer.querySelector('.dcom-c-hero-commercial__message-container') || contentContainer;
+  const heading = messageContainer.querySelector('h1');
+  const subheading = messageContainer.querySelector('p');
+
+  // Gather CTAs
+  const ctaWrapper = contentContainer.querySelector('.cbds-c-hero-commercial__cta-wrapper');
+  let ctas = [];
+  if (ctaWrapper) {
+    ctas = Array.from(ctaWrapper.querySelectorAll('a'));
+  }
+
+  // Compose content cell: heading, subheading, CTAs (preserving order and semantics)
   const contentCell = [];
-  if (headingEl) contentCell.push(headingEl);
-  if (subheadingEl) contentCell.push(subheadingEl);
-  if (ctaLink) contentCell.push(ctaLink);
+  if (heading) contentCell.push(heading);
+  if (subheading) contentCell.push(subheading);
+  if (ctas.length > 0) {
+    ctas.forEach((cta, idx) => {
+      contentCell.push(cta);
+      if (idx < ctas.length - 1) {
+        contentCell.push(document.createTextNode(' '));
+      }
+    });
+  }
 
-  // Build the table rows
+  // Table rows
   const headerRow = ['Hero (hero20)'];
-  const imageRow = [imageEl || ''];
-  const contentRow = [contentCell];
+  const rows = [headerRow];
+  if (imgEl) {
+    rows.push([imgEl]);
+  }
+  rows.push([contentCell]);
 
-  const table = WebImporter.DOMUtils.createTable([
-    headerRow,
-    imageRow,
-    contentRow,
-  ], document);
-
+  // Only include image row if there is an image (do not add an empty row)
+  const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }

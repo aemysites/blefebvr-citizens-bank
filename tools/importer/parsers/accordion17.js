@@ -1,53 +1,53 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the accordion container
+  // Defensive: find the accordion block
   const accordion = element.querySelector('.cbds-c-accordion');
   if (!accordion) return;
 
-  // Get all accordion items
-  const items = accordion.querySelectorAll(':scope > .cbds-c-accordion__item');
+  // Find all accordion items
+  const items = accordion.querySelectorAll('.cbds-c-accordion__item');
 
-  // Table header row (must match block name)
+  // Table header row as per block guidelines
   const headerRow = ['Accordion (accordion17)'];
   const rows = [headerRow];
 
   items.forEach((item) => {
     // Title cell: get the button text (inside h3 > button > span)
-    let titleCell = '';
+    let title = '';
     const heading = item.querySelector('.cbds-c-accordion__heading');
     if (heading) {
-      const button = heading.querySelector('button');
-      if (button) {
-        const span = button.querySelector('span');
+      const btn = heading.querySelector('button');
+      if (btn) {
+        const span = btn.querySelector('span');
         if (span) {
-          // Use a clone to preserve formatting and not move the original
-          titleCell = span.cloneNode(true);
-        } else {
-          titleCell = document.createTextNode(button.textContent.trim());
+          title = span.textContent.trim();
         }
-      } else {
-        titleCell = document.createTextNode(heading.textContent.trim());
       }
-    } else {
-      titleCell = document.createTextNode(item.textContent.trim());
     }
+    // Defensive: fallback to heading text if needed
+    if (!title && heading) {
+      title = heading.textContent.trim();
+    }
+    // Create a title element for cell (preserves formatting)
+    const titleEl = document.createElement('div');
+    titleEl.textContent = title;
 
-    // Content cell: get the card body (div.cbds-c-accordion__card-body)
-    let contentCell = '';
+    // Content cell: get the card body
+    let contentEl = null;
     const cardBody = item.querySelector('.cbds-c-accordion__card-body');
     if (cardBody) {
-      // Clone the card body to preserve all HTML and not move the original
-      contentCell = cardBody.cloneNode(true);
+      // Use the cardBody element directly for resilience
+      contentEl = cardBody;
     } else {
-      contentCell = document.createTextNode('');
+      // Defensive: fallback to empty div
+      contentEl = document.createElement('div');
     }
-
-    rows.push([titleCell, contentCell]);
+    rows.push([titleEl, contentEl]);
   });
 
   // Create the block table
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+  const block = WebImporter.DOMUtils.createTable(rows, document);
 
-  // Replace the original element with the table
-  element.replaceWith(table);
+  // Replace the original element with the block table
+  element.replaceWith(block);
 }
