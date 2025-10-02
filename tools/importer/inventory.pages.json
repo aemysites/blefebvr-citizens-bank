@@ -1,34 +1,468 @@
 {
   "templates": [
     {
-      "name": "E-commerce Product Listing",
+      "name": "E-commerce Product Catalog",
       "cluster": 1,
       "pages": [
+        {
+          "url": "https://www.citizensbank.com/checking/overview.aspx",
+          "uuid": "2939b6f930065b8d21273c25c01507c13ae023a8"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
+          "uuid": "78ea4bc536fbc566a848ed9937abe239b3c38564"
+        },
+        {
+          "url": "https://www.citizensbank.com/student-loans/parent-student-loan-refinance.aspx",
+          "uuid": "34de8d185c1111bce81b83d2bc39fe29582522f1"
+        },
+        {
+          "url": "https://www.citizensbank.com/student-loans/scholarship.aspx",
+          "uuid": "6c6671ef8a29a814ee2e3e429c536e8b429df91e"
+        },
+        {
+          "url": "https://www.citizensbank.com/student-loans/private-student-loans.aspx",
+          "uuid": "bc651beee9cfd3aa1f4d993ea8c70fdaa59ca5c6"
+        },
         {
           "url": "https://www.citizensbank.com/credit-cards/overview.aspx",
           "uuid": "a9ddfda12cc9a67b742df355ebbc7d161d775558"
         },
         {
-          "url": "https://www.citizensbank.com/checking/overview.aspx",
-          "uuid": "2939b6f930065b8d21273c25c01507c13ae023a8"
-        }
-      ]
-    },
-    {
-      "name": "'Dashboard Template'",
-      "cluster": 2,
-      "pages": [
+          "url": "https://www.citizensbank.com/loans/home-mortgage.aspx",
+          "uuid": "51a481accb1b528dce09a7c97a86568d88672af6"
+        },
         {
-          "url": "https://www.citizensbank.com/savings/money-market-accounts/overview.aspx",
-          "uuid": "78ea4bc536fbc566a848ed9937abe239b3c38564"
+          "url": "https://www.citizensbank.com/student-loans/medical-residency-refinance.aspx",
+          "uuid": "6023cb4c1e539303c66f0c7c7cd830436551321e"
+        },
+        {
+          "url": "https://www.citizensbank.com/loans/mortgage-refinance.aspx",
+          "uuid": "8b731581088ca78b3aa9edd5f6a5a7abed632307"
+        },
+        {
+          "url": "https://www.citizensbank.com/investing-and-wealth-management/plan-your-financial-goals.aspx",
+          "uuid": "5c20666af1421a0259b424870f352227a0a0a70c"
+        },
+        {
+          "url": "https://www.citizensbank.com/investing-and-wealth-management/wealth-advisors.aspx",
+          "uuid": "009eb2e8ff4ddd75849c9e0dd3d81112d5867730"
+        },
+        {
+          "url": "https://www.citizensbank.com/investing-and-wealth-management/services/overview.aspx",
+          "uuid": "f291ac3da79eb6eeba8b560f6f237a58a2da8da4"
+        },
+        {
+          "url": "https://www.citizensbank.com/home-equity-loans/home-equity-line-of-credit-heloc.aspx",
+          "uuid": "70f60207f944966fd93306f08e869c22c591949f"
+        },
+        {
+          "url": "https://www.citizensbank.com/investing-and-wealth-management/products-services-and-calculators.aspx",
+          "uuid": "b3dc590699b8979496ac91b6dd720eb1a790e38f"
+        },
+        {
+          "url": "https://www.citizensbank.com/investing-and-wealth-management/insights-and-thought-leadership.aspx",
+          "uuid": "9ba88ea06628a8c43ac06eb4aaa03748cf2e87d3"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
+          "uuid": "f7c11c2eb47250da73bf51416aff2243e4e32bb7"
+        },
+        {
+          "url": "https://www.citizensbank.com/savings/savings-accounts/savings-tracker.aspx",
+          "uuid": "038b121a808b27dc0713eecfd56cc9cf05ad7259"
         },
         {
           "url": "https://www.citizensbank.com/savings/cds-certificates-of-deposit/online-certificate-of-deposit.aspx",
           "uuid": "d23406c313077f53ef23e86fd26654d0eb07ab80"
         },
         {
-          "url": "https://www.citizensbank.com/savings/savings-accounts/overview.aspx",
-          "uuid": "f7c11c2eb47250da73bf51416aff2243e4e32bb7"
+          "url": "https://www.citizensbank.com/loans/build-a-home.aspx",
+          "uuid": "9b026c6475f5d9e01c262ead62c639790b546e6f"
+        },
+        {
+          "url": "https://www.citizensbank.com/student-loans/multi-year-approval.aspx?WT.ac=CB_H_HPHighlightUnit_StudentLending_MA_LearnMore_A708",
+          "uuid": "1dc075f554bac8a8f187022fc042d933a1f395ab"
+        },
+        {
+          "url": "https://www.citizensbank.com/student-loans/graduate-overview.aspx",
+          "uuid": "07e31883a625221b7c2ffd070b950b7a8ec8b4f8"
+        },
+        {
+          "url": "https://www.citizensbank.com/student-loans/parent-student-loans.aspx",
+          "uuid": "39fab75c18ad101da24171bf13c0b6194a6bf62b"
+        }
+      ]
+    },
+    {
+      "name": "\"News Portal\"",
+      "cluster": 2,
+      "pages": [
+        {
+          "url": "https://www.citizensbank.com/about-us/our-company/our-history.aspx",
+          "uuid": "66f2f5e9c649a71ba853689b5860e6a2f2b5a03a"
+        },
+        {
+          "url": "https://www.citizensbank.com/search/answers.aspx?query=branch+near+me&amp;referrerPageUrl=",
+          "uuid": "cfc8b23b3c693280d18243a9eda99b6513eb84be"
+        },
+        {
+          "url": "https://www.citizensbank.com/learning/managing-your-finances.aspx",
+          "uuid": "c238d5e1dccd7361dc3b053058a1c5806f9f1291"
+        },
+        {
+          "url": "https://www.citizensbank.com/search/answers.aspx?query=branches+near+me&tabOrder=%2Clocations%2C&verticalUrl=locations.html",
+          "uuid": "edcb960587b1d4030a041e4fcfd3edde4c190275"
+        },
+        {
+          "url": "https://www.citizensbank.com/learning/home-ownership.aspx",
+          "uuid": "5ac780b53e8bacd2d0764c7efda366c23921712f"
+        },
+        {
+          "url": "https://www.citizensbank.com/customer-service/pay-my-loan.aspx",
+          "uuid": "3f86570e1413223d41ea72d3f760fbb45e43ad83"
+        },
+        {
+          "url": "https://www.citizensbank.com/account-pdfs/overview.aspx",
+          "uuid": "1a0a077f7871e7ece162b87c86c4176541ac1100"
+        },
+        {
+          "url": "https://www.citizensbank.com/account-safeguards/overview.aspx",
+          "uuid": "edc3678e9f44c6175d6c11e7d525de6d4a0c9019"
+        },
+        {
+          "url": "https://www.citizensbank.com/customer-service/forms-docs.aspx",
+          "uuid": "8e15cb8de1c7f90c94c5a97d12ae389564219186"
+        },
+        {
+          "url": "https://www.citizensbank.com/account-safeguards/privacy.aspx",
+          "uuid": "3062189440b435903f2cdd315f6fa64f3d146a71"
+        },
+        {
+          "url": "https://www.citizensbank.com/about-us/overview.aspx",
+          "uuid": "597dd006332a3509c1c5f119d01f1f4438318114"
+        },
+        {
+          "url": "https://www.citizensbank.com/customer-service/contact-us.aspx",
+          "uuid": "0867bad5df3ce74050fc1e4de539f5359ec8f3f9"
+        },
+        {
+          "url": "https://www.citizensbank.com/about-our-ads/overview.aspx",
+          "uuid": "401087424e5429d498b9bc39f2164d36417ada8c"
+        },
+        {
+          "url": "https://www.citizensbank.com/homepage.aspx",
+          "uuid": "1f4186ca59bca4248202175b3ada9b410daa48e6"
+        },
+        {
+          "url": "https://www.citizensbank.com/learning/college/overview.aspx",
+          "uuid": "5be5d9d9d06acc0305b06452814b68a78d10697b"
+        },
+        {
+          "url": "https://www.citizensbank.com/about-us/our-company/our-vision-and-values.aspx",
+          "uuid": "8ff9abb7aca8d58495932f8d4b7d0c0546743def"
+        },
+        {
+          "url": "https://www.citizensbank.com/ada-compliance/overview.aspx",
+          "uuid": "9310dc1b933022a6eb6271f2962f1856aa76b48d"
+        },
+        {
+          "url": "https://www.citizensbank.com/about-us/community/citizens-impact.aspx",
+          "uuid": "26733c3a7a9b5d7399ec6912bfcd9a55929a5b53"
+        },
+        {
+          "url": "https://www.citizensbank.com/about-us/community.aspx",
+          "uuid": "bba56eea4f4ba128b2b41acbb08a4090b5c1270f"
+        },
+        {
+          "url": "https://www.citizensbank.com/customer-service/faqs/overview.aspx",
+          "uuid": "9cd51423fccb4e510b47c1866f3c7d9911bdf09f"
+        },
+        {
+          "url": "https://www.citizensbank.com/site-requirements/overview.aspx",
+          "uuid": "a135ebf36ae48aa4b7b7f53ebda64440dee1558c"
+        },
+        {
+          "url": "https://www.citizensbank.com/learning/research-insights-center.aspx",
+          "uuid": "c724fd1bceff1e97ac5701c369431b1bfe916af3"
+        },
+        {
+          "url": "https://www.citizensbank.com/learning/financial-planning.aspx",
+          "uuid": "22e2139fb5fa9609dc99e5fbdef2a56a331475c1"
+        },
+        {
+          "url": "https://www.citizensbank.com/learning/overview.aspx",
+          "uuid": "51939b7e9ffd7516cecdd552d24950fbb76b5d7b"
+        },
+        {
+          "url": "https://www.citizensbank.com/about-us/our-company/suppliers.aspx",
+          "uuid": "7fa6136eeba2d895aa2546d77e666c185d232d13"
+        },
+        {
+          "url": "https://www.citizensbank.com/about-us/our-company/leadership-team.aspx",
+          "uuid": "5354b4af93408a069c0cc5181901fe174cb39b7a"
+        },
+        {
+          "url": "https://www.citizensbank.com/about-us/our-company/overview.aspx",
+          "uuid": "c557a4a470b14176d2af762978b1c55513171478"
+        },
+        {
+          "url": "https://www.citizensbank.com/about-us/our-company/awards-and-recognition.aspx",
+          "uuid": "0a528da89528e2ce83e01692ee1bd8bb02d5c028"
+        },
+        {
+          "url": "https://www.citizensbank.com/about-us/our-company/corporate-sponsorships.aspx",
+          "uuid": "ba5ab1a0e4c1507e18481fe871fd84e70281e882"
+        },
+        {
+          "url": "https://www.citizensbank.com/about-us/sustainability-impact.aspx",
+          "uuid": "0890e997fde1fc1cd00dd257edb1d056f429b17c"
+        }
+      ]
+    },
+    {
+      "name": "'Portfolio Showcase'",
+      "cluster": 3,
+      "pages": [
+        {
+          "url": "https://www.citizensbank.com/private-banking/services/private-wealth.aspx",
+          "uuid": "29dff942ab8cd2edd2bdab6e265a8d68e9f23463"
+        },
+        {
+          "url": "https://www.citizensbank.com/private-banking/locations/overview.aspx",
+          "uuid": "20fbbcf57683d46b58a7b2f871562cde23e94903"
+        },
+        {
+          "url": "https://www.citizensbank.com/private-banking/areas-of-focus/commercial-real-estate.aspx",
+          "uuid": "cc130ebd8e6cf1cab2c0461ff129e646cfe44035"
+        },
+        {
+          "url": "https://www.citizensbank.com/private-banking/areas-of-focus/private-equity-venture-capital.aspx",
+          "uuid": "cb01b03761d9dfd58e33875b3d33571e9cc4ee7d"
+        },
+        {
+          "url": "https://www.citizensbank.com/private-banking/areas-of-focus/nonprofits-private-foundations.aspx",
+          "uuid": "d27eb1ab3f920b9d6d0f3c0142f92b749323fe76"
+        },
+        {
+          "url": "https://www.citizensbank.com/private-banking/areas-of-focus/individuals-and-families.aspx",
+          "uuid": "46e33927a49c9355f881af6df5fe6e17f7fe1a16"
+        },
+        {
+          "url": "https://www.citizensbank.com/private-banking/areas-of-focus/professional-services.aspx",
+          "uuid": "036c10ada51f6ec58fb44e50acd0fd43960906fd"
+        },
+        {
+          "url": "https://www.citizensbank.com/private-banking/areas-of-focus/innovation-banking.aspx",
+          "uuid": "d68aa19632c2ef6ed39ef105f1370cc318ec4572"
+        }
+      ]
+    },
+    {
+      "name": "'Team Profile Listing'",
+      "cluster": 4,
+      "pages": [
+        {
+          "url": "https://www.citizensbank.com/corporate-finance/capability/risk-management/overview.aspx",
+          "uuid": "4b3bccdc3dea2c00a31a50b6fc1302b29917da49"
+        },
+        {
+          "url": "https://www.citizensbank.com/corporate-finance/capability/treasury-management/overview.aspx",
+          "uuid": "cfdb77ab18232e66382f898644642fade3fb5c35"
+        },
+        {
+          "url": "https://www.citizensbank.com/corporate-finance/capability/financing/overview.aspx",
+          "uuid": "a6020ab0ffaf130c3a4e042bd1c1190c4d5933c8"
+        },
+        {
+          "url": "https://www.citizensbank.com/corporate-finance/capability/capital-markets/overview.aspx",
+          "uuid": "8c078d0a90777f21f132cd6bf7e16280ef2769bf"
+        },
+        {
+          "url": "https://www.citizensbank.com/corporate-finance/overview.aspx",
+          "uuid": "2d32c35a03e7dbfe57e55d7bcc5ab46138e0cda9"
+        }
+      ]
+    },
+    {
+      "name": "'Dashboard Template'",
+      "cluster": 5,
+      "pages": [
+        {
+          "url": "https://www.citizensbank.com/small-business/overview.aspx",
+          "uuid": "a23f47f9d21bc21c0eff178cb8f5e4bac6a1379c"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/sba-loans/overview.aspx",
+          "uuid": "6e857c8fad2bbbbcc9df910062a5f03f3d7baceb"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/checking/overdraft-protection.aspx",
+          "uuid": "75733d373d37460d210df0a63723fabed2041480"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/cash-management/overview.aspx",
+          "uuid": "c1248526db55b522016143a2cc16c7143072b6a1"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/business-account-guides/overview.aspx",
+          "uuid": "799b7427a41f0a5839e8c4c854bc90e44f67e46a"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/checking/non-profit-account.aspx",
+          "uuid": "ead8057601ba7bd78836999a3fca59c79ca49c36"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/investing-and-benefits/business-insurance-coverage.aspx",
+          "uuid": "1f416e16624d354ad83bea247f6c360f34ec0488"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/cash-management/cash-flow-essentials/overview.aspx",
+          "uuid": "d1d9675595bd6bfcd2e5cd62d5a15d87876f5890"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/online-services/accessoptima.aspx",
+          "uuid": "052fc957f57d25e648a010a0b1090a545509e900"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/investing-and-benefits/employee-benefits-services/overview.aspx",
+          "uuid": "127d37acf1471e43007d01aa4effa7a6fcc1e94a"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/cash-management/autobooks/overview.aspx",
+          "uuid": "7cdced87ae66ac7019077d741aaa318a53e231a4"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/cash-management/payroll.aspx",
+          "uuid": "38e85358882f55dfc834923bacab18f69792649e"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/checking/specialized-accounts.aspx",
+          "uuid": "2817e3431dcda2b36b751ef7cd5a1dee34de73e2"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/investing-and-benefits/investment-management.aspx",
+          "uuid": "d2dcf85a0a98a2f01fc2fd7e4134f914a00dbb6d"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/savings/overview.aspx",
+          "uuid": "b38225976f4b5312229f09492ab2fc2b1170da52"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/merchant-services/overview.aspx",
+          "uuid": "fcfa89d0055ea2168ac08c8acea7488d7bc4766f"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/loans/overview.aspx",
+          "uuid": "8f0c45ad7e83e2294cdfb4f28038d5d90a0460b8"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/business-credit-cards/overview.aspx",
+          "uuid": "725f65bafa0c44be950c4024d228b6cb07fafc75"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/checking/overview.aspx",
+          "uuid": "1184f2c988a42d76839f0960d314af2581413150"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/paycheck-protection-program-forgiveness.aspx",
+          "uuid": "5ef2af5ecf32f57dba50d4918c69b9d3f224981c"
+        },
+        {
+          "url": "https://www.citizensbank.com/small-business/business-banking-online.aspx",
+          "uuid": "29af9d8e5d4d82ff73ca2442fe3081539ecbfd3e"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard Page",
+      "cluster": 6,
+      "pages": [
+        {
+          "url": "https://www.citizensbank.com/savings/savings-accounts/retirement-savings-plans/overview.aspx",
+          "uuid": "2e783b366ecd42d93f9cad48a64fdf46516df063"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard Template",
+      "cluster": 7,
+      "pages": [
+        {
+          "url": "https://www.citizensbank.com/investing-and-wealth-management/products-services-and-calculators/financial-calculators/working-capital-calculator.aspx",
+          "uuid": "ef8f83d0eb4f092c6a26f23f0b4299852656b564"
+        },
+        {
+          "url": "https://www.citizensbank.com/financial-calculators/equipment-loan-calculator.aspx",
+          "uuid": "afbf5872f66a9b6904b43e39250a8a5521797185"
+        },
+        {
+          "url": "https://www.citizensbank.com/financial-calculators/business-loan-calculator.aspx",
+          "uuid": "ff14aeacb8a0f0f6821bdd5f86de48992067cdcf"
+        }
+      ]
+    },
+    {
+      "name": "'Resource Hub'",
+      "cluster": 8,
+      "pages": [
+        {
+          "url": "https://www.citizensbank.com/corporate-finance/capability/credit-card-and-payment-services/overview.aspx",
+          "uuid": "e35ddf7bb365f9bd0bb59d698a7809ef268f0b03"
+        }
+      ]
+    },
+    {
+      "name": "'Corporate Dashboard'",
+      "cluster": 9,
+      "pages": [
+        {
+          "url": "https://www.citizensbank.com/about-us/sustainability-impact/diversity-equity-and-inclusion.aspx",
+          "uuid": "f0b124fbc06cb00debee35daa02695b02cba2987"
+        },
+        {
+          "url": "https://www.citizensbank.com/about-us/sustainability-impact/esg.aspx",
+          "uuid": "73ad05adb3cd05634cbea0e2f569cb80c36ed421"
+        },
+        {
+          "url": "https://www.citizensbank.com/about-us/sustainability-impact/climate.aspx",
+          "uuid": "3535b6657b18a58aded29682be3efbe980d2e0e4"
+        }
+      ]
+    },
+    {
+      "name": "Gallery Portfolio Template",
+      "cluster": 10,
+      "pages": [
+        {
+          "url": "https://www.citizensbank.com/private-banking/overview.aspx",
+          "uuid": "413650184570f7403c8ab02173bde9ee44bf3cb5"
+        },
+        {
+          "url": "https://www.citizensbank.com/private-banking/insights/overview.aspx",
+          "uuid": "39626aa9425751d948e8335918c6c7252db57579"
+        },
+        {
+          "url": "https://www.citizensbank.com/private-banking/services/personal-banking.aspx",
+          "uuid": "31f58ef5e6a69b2d66a17d80d85b2370e6e39819"
+        },
+        {
+          "url": "https://www.citizensbank.com/private-banking/services/business-banking.aspx",
+          "uuid": "cc908adfbd8a98ff25a1c46850c361904b6cf1ef"
+        }
+      ]
+    },
+    {
+      "name": "'Course Overview'",
+      "cluster": 11,
+      "pages": [
+        {
+          "url": "https://www.citizensbank.com/es/homepage.aspx",
+          "uuid": "d680ecc0daa4219ebacf3f28279b47365e9f869b"
+        },
+        {
+          "url": "https://www.citizensbank.com/es/customer-service/branch-locator.aspx",
+          "uuid": "e6c8510c96906b70371f20d04b43167d6d8b679f"
         }
       ]
     }
